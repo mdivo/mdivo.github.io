@@ -1,0 +1,331 @@
+<!doctype html>
+
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Miniproject-1 Miguel Divo</title>
+    <style> body {font-family: sans-serif;} </style>
+</head>
+
+<body>
+
+    <h1>Queen Mary University London (Mile End)</h1>
+    
+    <h2>Interactive Campus Map</h2>
+
+
+    <!-- A1 PASTE YOUR SVG HERE -->
+    <svg width="645" height="480" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+        <!-- Created with SVG-edit - https://github.com/SVG-Edit/svgedit-->
+        <g class="layer">
+         <title>map</title>
+
+         <rect fill="#9feddb" height="480" id="svg_1" width="650"/>
+
+         <path id="extraBuidling" d="m293.08333,284.58877l0,-22.85543l-162.41667,0l0,139.10001l42.99265,0l-0.25,-116.17696l119.67402,-0.06762z" fill="#9feddb"/>
+         <path id="extraBuidling1" d="m135.25889,85.50123c0,0.25389 105.99111,0.50655 105.99111,0.50655c0,0 0,103.33194 0,103.58708c0,0.25514 -41.99171,0.25514 -41.99171,0.25514c0,0 0,-37.50567 0,-37.50567c0,0 -64.75829,-0.25514 -64.75829,-0.25514c0,0 0.75889,-66.84185 0.75889,-66.58796z" fill="#9feddb"/>
+         <rect fill="#9feddb" height="71.33333" id="extraBuidling2" width="66" x="34.66667" y="328"/>
+         <rect fill="#9feddb" height="59.6" id="extraBuidling3" width="55.2" x="234.4" y="184"/>
+
+         <path id="extraBuidling4" d="m362.00001,208l142.39865,-0.66667l0,-16.66666l124.93467,0l0,-52l-126.27805,35.33333l-141.05527,0.66667l0,33.33333z" fill="#9feddb" />
+
+         <path id="godward_sqaure" d="m239.41174,257.50001l-133.52938,-0.14706l-0.40001,-72.65294l49.1353,-0.00001l-16.57647,-30.81765l61.22353,0l0,32.14706l39.70588,0l0.44115,71.4706z" fill="#1bd1a6" stroke="#1bd1a6" stroke-width="5"/>
+
+         <path d="m38,86.66667l0,94l64.66666,0l0.00001,-28l8.66666,0l0,27.33333l35.33334,0l-11.33334,-20l-12.66666,0l-0.00001,-8c8,0 12.66667,0 12.66667,0c0,0 -0.66667,-65.33333 0,-65.33333c0.66667,0 -89.33333,0 -97.33333,0z" fill="rgb(94,43,126)" id="computer_science" stroke="#000000" stroke-width="5"/>
+         <rect fill="#10a3a3" height="447.44527" id="bandcroft_road" stroke="#10a3a3" stroke-width="5" width="35.76642" x="308.90512" y="-24.52553"/>
+
+         <path id="extraBuidling5" d="m289.76366,183.9l-49.78947,0l-0.47419,-98.67391l127.08171,-0.50602l-0.47419,-52.12006l28.45113,0.50602l0,65.27659l34.14135,0l-0.47419,30.3612l-45.52181,0.50602l-16.59649,-20.24081l-0.47419,-9.61438l-75.86968,0l0,84.50535l0,0.00001l0.00002,-0.00001z" fill="#9feddb"/>
+         <rect fill="#10a3a3" height="14.93333" id="extraBuidling6" width="41" x="306.4" y="84.6"/>
+
+         <rect fill="#10a3a3" height="54.74453" id="mile_end_road" stroke="#10a3a3" stroke-width="5" width="647.44528" x="-1.31387" y="425.10952"/>
+         <rect fill="rgb(94,43,126)" height="100.5" id="itl" stroke="#000000" stroke-width="5"  width="65" x="37" y="192"/>
+         <path d="m174.99947,274.5c-0.33149,41.16667 0.33149,82.83333 0,124l290.39161,0l0,-11.5l69.13833,0l0,-37l-68.64108,0l0,-142.5l-101.93541,0l0,167.5l-73.09515,0l0,-101l-115.8583,0.5z" fill="rgb(94,43,126)" id="engineering" stroke="#000000" stroke-width="5"/>
+         <path d="m534.99996,206.02942l70.14708,-0.14707c0,0 0.44116,35.44119 -0.29414,34.70589c-0.73529,-0.73529 33.08824,0 32.64708,-0.14707c-0.44115,-0.14707 0.44116,39.85296 0,39.70588c-0.44115,-0.14707 -18.67649,0.14708 -19.11764,0c-0.44116,-0.14707 0.44115,116.32355 0,116.17647c-0.44116,-0.14707 -82.64709,0.88237 -83.08824,0.7353c-0.44115,-0.14708 -0.29414,-191.7647 -0.29414,-191.0294z" fill="rgb(94,43,126)" id="people_palace" stroke="#000000" stroke-width="5"/>
+         
+         <image id="building_image_id" x="355" y="50" width="280" height="110" href=""/>
+
+
+         <style>
+            .small {font-weight: lighter;}
+            .smaller {font-weight: lighter; font-size: 0.6em;}
+            .white {font-weight: bold; fill: white; font-size: 0.63em;}
+         </style>
+
+         <text id="mile_end_text" x="280" y="455" class="small">Mile End Road</text>
+         <text x="280" y="240" text-anchor="middle" dominant-baseline="central" transform="rotate(90, 330, 235)" class="small">Bandcroft Road</text>
+         <text id="6_id"  text-anchor="middle" x="85" y="135" class="white">6</text>
+         <text id="5_id"  text-anchor="middle" x="70" y="250" class="white">5</text>
+         <text id="15_id"  text-anchor="middle" x="230" y="340" class="white">15</text>
+         <text id="15.1_id"  text-anchor="middle" x="415" y="310" class="white">15</text>
+         <text id="16_id"  text-anchor="middle" x="575" y="310" class="white">16</text>
+         <text id="godward_id" text-anchor="middle"  x="170" y="220" class="white"></text>
+        </g>
+        <g>
+         <ellipse id="stepney_red" cx="80" cy="450"  fill="#10a3a3" rx="20" ry="20" stroke-width="5"/>
+         <ellipse id="stepney_grey" cx="80" cy="450" fill="#10a3a3" " rx="13" ry="13" stroke="10a3a3" stroke-width="5"/>
+         <rect id="stepney_blue" height="4"  stroke="#10a3a3" stroke-width="5" width="50" x="56" y="449"/>
+         <text id="stepney_text" x="110" y="454" class="smaller"></text>
+
+         <ellipse id="mile_red" cx="570" cy="450" fill="#10a3a3"  rx="20" ry="20" stroke-width="5"/>
+         <ellipse id="mile_grey" cx="570" cy="450" fill="#10a3a3"  rx="13" ry="13" stroke="10a3a3" stroke-width="5"/>
+         <rect id="mile_blue" height="4"  stroke="#10a3a3" stroke-width="5" width="50" x="545" y="449"/>
+         <text id="mile_text" x="435" y="454" class="smaller"></text>
+        </g>
+
+    </svg>
+
+
+    <h2>Summary</h2>
+    <ul>
+        <li>Moving mouse over any building/sqaure will create a "popup" effect, by using <i>.getBBox()</i> to calcualte the cetner of each element and transforming + translating the element.</li>
+        <li>Clicking on a building/sqaure will change the number of the building to its name, using <i>.innerHTML</i> to change their respective <i>text</i> elements.</li>
+        <li>Clicking down on a buildig/sqaure will display a picture of the building, using <i>.setAttributeNS()</i> to change the <i>href</i> to its respective image.</li>
+        <li>Double clicking on a building/square will reset its text to its default and remove the image from the window, using the <i>dblclick</i> event listener to identify a double click</li>
+        <li>Holding on 'Mile End Road' <i>text</i> element will display the closest underground stations, used a combination of methods used for the previous points</li>
+        <li>Hovering around the map will complete the map by showing the other buildings in the area.</li>
+    </ul>
+
+
+    <script type='text/javascript'>
+
+
+        // event-driven mouse-interaction with SVG objects
+        
+        function unselected_colour(evt) {
+            // get the element that triggered the browser event
+            let target = evt.target;
+            // modify the element
+            target.setAttributeNS(null, 'fill', 'rgb(94,43,126)');
+            target.setAttribute('transform', 'scale(1)')
+        }
+        function selected_colour(evt) {
+            // get the element that triggered the browser event
+            let target = evt.target;
+            // modify the element
+            target.setAttributeNS(null, 'fill', 'rgb(31, 26, 82)');
+            let rect = target.getBBox();
+            let cx = rect.x + rect.width / 2;
+            let cy = rect.y + rect.height / 2;
+            target.setAttribute('transform', `translate(${cx}, ${cy}) scale(1.1) translate(${-cx},${-cy})`) 
+        }
+
+        function unselected_colour_forGodWardSquare(evt) {
+            // get the element that triggered the browser event
+            let target = evt.target;
+            // modify the element
+            target.setAttributeNS(null, 'fill', '#1bd1a6');
+            target.setAttributeNS(null, 'stroke', '#1bd1a6');
+            target.setAttribute('transform', 'scale(1)')
+        }
+        function selected_colour_forGodWardSquare(evt) {
+            // get the element that triggered the browser event
+            let target = evt.target;
+            // modify the element
+            target.setAttributeNS(null, 'fill', '#12a683');
+            target.setAttributeNS(null, 'stroke', '#12a683');
+            let rect = target.getBBox();
+            let cx = rect.x + rect.width / 2;
+            let cy = rect.y + rect.height / 2;
+            target.setAttribute('transform', `translate(${cx}, ${cy}) scale(1.1) translate(${-cx},${-cy})`)
+        }
+
+        function compSci_clicked(evt){
+            let elem = document.getElementById("6_id");
+            elem.innerHTML = "Computer Science";
+        }
+        function itl_clicked(evt){
+            let elem = document.getElementById("5_id");
+            elem.innerHTML = "ITL";
+        }
+        function engineering_clicked(evt){
+            let elem = document.getElementById("15_id");
+            elem.innerHTML = "Engineering";
+            let elem1 = document.getElementById("15.1_id");
+            elem1.innerHTML = "Engineering";
+        }
+        function peoplePalace_clicked(evt){
+            let elem = document.getElementById("16_id");
+            elem.innerHTML = "People's Palace"; 
+        }
+        function godward_clicked(evt) {
+            let elem = document.getElementById("godward_id");
+            elem.innerHTML = "Godward Sqaure"; 
+        }
+
+        function compSciPIC_clicked(evt){
+            let elem = document.getElementById("building_image_id");
+            elem.setAttributeNS(null, 'href', 'compSci.png');
+        }
+        function itlPIC_clicked(evt){
+            let elem = document.getElementById("building_image_id");
+            elem.setAttributeNS(null, 'href', 'ITL.png');
+        }
+        function godwardPIC_clicked(evt){
+            let elem = document.getElementById("building_image_id");
+            elem.setAttributeNS(null, 'href', 'godwardSqaure.png');
+        }
+        function palacePIC_clicked(evt){
+            let elem = document.getElementById("building_image_id");
+            elem.setAttributeNS(null, 'href', 'peoplePalace.png');
+        }
+        function engineerPIC_clicked(evt){
+            let elem = document.getElementById("building_image_id");
+            elem.setAttributeNS(null, 'href', 'engineering.png');
+        }
+
+        function reset_godward(evt) {
+            let elem = document.getElementById("building_image_id");
+            elem.setAttributeNS(null, 'href', '');
+            let elem1 = document.getElementById("godward_id");
+            elem1.innerHTML = ""; 
+        }
+        function reset_compSic(evt) {
+            let elem = document.getElementById("building_image_id");
+            elem.setAttributeNS(null, 'href', '');
+            let elem1 = document.getElementById("6_id");
+            elem1.innerHTML = "6"; 
+        }
+        function reset_ITL(evt) {
+            let elem = document.getElementById("building_image_id");
+            elem.setAttributeNS(null, 'href', '');
+            let elem1 = document.getElementById("5_id");
+            elem1.innerHTML = "5"; 
+        }
+        function reset_engineering(evt) {
+            let elem = document.getElementById("building_image_id");
+            elem.setAttributeNS(null, 'href', '');
+            let elem1 = document.getElementById("15_id");
+            elem1.innerHTML = "15"; 
+            let elem2 = document.getElementById("15.1_id");
+            elem2.innerHTML = "15"; 
+        }
+        function reset_peoplePalace(evt) {
+            let elem = document.getElementById("building_image_id");
+            elem.setAttributeNS(null, 'href', '');
+            let elem1 = document.getElementById("16_id");
+            elem1.innerHTML = "16"; 
+        }
+
+        function mile_hold(evt) {
+            let elem = document.getElementById("stepney_red");
+            elem.setAttributeNS(null, 'fill', '#FF0000');
+            let elem1 = document.getElementById("stepney_blue");
+            elem1.setAttributeNS(null, 'stroke', 'blue');
+            let elem2 = document.getElementById("stepney_text");
+            elem2.innerHTML = "&lt;--Stepney Green Tube Station";
+
+            let elem3 = document.getElementById("mile_red");
+            elem3.setAttributeNS(null, 'fill', '#FF0000');
+            let elem4 = document.getElementById("mile_blue");
+            elem4.setAttributeNS(null, 'stroke', 'blue');
+            let elem5 = document.getElementById("mile_text");
+            elem5.innerHTML = "Mile End Tube Station--&gt;";
+        }
+        function mile_unhold(evt) {
+            let elem = document.getElementById("stepney_red");
+            elem.setAttributeNS(null, 'fill', '#10a3a3');
+            let elem1 = document.getElementById("stepney_blue");
+            elem1.setAttributeNS(null, 'stroke', '#10a3a3');
+            let elem2 = document.getElementById("stepney_text");
+            elem2.innerHTML = "";
+
+            let elem3 = document.getElementById("mile_red");
+            elem3.setAttributeNS(null, 'fill', '#10a3a3');
+            let elem4 = document.getElementById("mile_blue");
+            elem4.setAttributeNS(null, 'stroke', '#10a3a3');
+            let elem5 = document.getElementById("mile_text");
+            elem5.innerHTML = "";
+        }
+
+        function hoverExtraBuilding(){
+            let elem = document.getElementById("extraBuidling");
+            elem.setAttributeNS(null, 'fill', '#39baed');
+        }
+        function hoverExtraBuilding1(){
+            let elem = document.getElementById("extraBuidling1");
+            elem.setAttributeNS(null, 'fill', '#ea8f3a');
+        }
+        function hoverExtraBuilding2(){
+            let elem = document.getElementById("extraBuidling2");
+            elem.setAttributeNS(null, 'fill', '#39baed');
+        }
+        function hoverExtraBuilding3(){
+            let elem = document.getElementById("extraBuidling3");
+            elem.setAttributeNS(null, 'fill', '#ea8f3a');
+        }
+        function hoverExtraBuilding4(){
+            let elem = document.getElementById("extraBuidling4");
+            elem.setAttributeNS(null, 'fill', '#5e2b7e');
+        }
+        function hoverExtraBuilding5(){
+            let elem = document.getElementById("extraBuidling5");
+            elem.setAttributeNS(null, 'fill', '#5e2b7e');
+            let elem2 = document.getElementById("extraBuidling6");
+            elem2.setAttributeNS(null, 'fill', '#5e2b7e');
+        }
+
+
+        // find the SVG rectangle in the DOM
+        let mileEndRoad_obj = document.getElementById('mile_end_text');
+
+        let godwardSquare_obj = document.getElementById('godward_sqaure');
+
+        let compSci_obj = document.getElementById('computer_science');
+
+        let itl_obj = document.getElementById('itl');
+        let engineering_obj = document.getElementById('engineering');
+        let peoplePalace_obj = document.getElementById('people_palace');
+
+        let extra_building = document.getElementById('extraBuidling');
+        let extra_building1 = document.getElementById('extraBuidling1');
+        let extra_building2 = document.getElementById('extraBuidling2');
+        let extra_building3 = document.getElementById('extraBuidling3');
+        let extra_building4 = document.getElementById('extraBuidling4');
+        let extra_building5 = document.getElementById('extraBuidling5');
+        let extra_building6 = document.getElementById('extraBuidling6');
+
+        // pass the above functions as callbacks, to be triggered by mouse events
+        godwardSquare_obj.addEventListener('mouseover', selected_colour_forGodWardSquare, false);
+        godwardSquare_obj.addEventListener('mouseout', unselected_colour_forGodWardSquare, false);
+        godwardSquare_obj.addEventListener('mousedown', godward_clicked, false);
+        godwardSquare_obj.addEventListener('click', godwardPIC_clicked,false);
+        godwardSquare_obj.addEventListener('dblclick', reset_godward,false);
+
+        compSci_obj.addEventListener('mouseover', selected_colour, false);
+        compSci_obj.addEventListener('mouseout', unselected_colour, false);
+        compSci_obj.addEventListener('mousedown', compSci_clicked,false);
+        compSci_obj.addEventListener('click', compSciPIC_clicked,false);
+        compSci_obj.addEventListener('dblclick', reset_compSic,false);
+
+        itl_obj.addEventListener('mouseover', selected_colour, false);
+        itl_obj.addEventListener('mouseout', unselected_colour, false);
+        itl_obj.addEventListener('mousedown', itl_clicked,false);
+        itl_obj.addEventListener('click', itlPIC_clicked,false);
+        itl_obj.addEventListener('dblclick', reset_ITL,false);
+        
+        engineering_obj.addEventListener('mouseover', selected_colour, false);
+        engineering_obj.addEventListener('mouseout', unselected_colour, false);
+        engineering_obj.addEventListener('mousedown', engineering_clicked,false);
+        engineering_obj.addEventListener('click', engineerPIC_clicked,false);
+        engineering_obj.addEventListener('dblclick', reset_engineering,false);
+
+        peoplePalace_obj.addEventListener('mouseover', selected_colour, false);
+        peoplePalace_obj.addEventListener('mouseout', unselected_colour, false);
+        peoplePalace_obj.addEventListener('mousedown', peoplePalace_clicked,false);
+        peoplePalace_obj.addEventListener('click', palacePIC_clicked,false);
+        peoplePalace_obj.addEventListener('dblclick', reset_peoplePalace,false);
+
+        mileEndRoad_obj.addEventListener('mousedown', mile_hold, false);
+        mileEndRoad_obj.addEventListener('mouseup', mile_unhold, false);
+
+        extra_building.addEventListener('mouseover', hoverExtraBuilding, false);
+        extra_building1.addEventListener('mouseover', hoverExtraBuilding1, false);
+        extra_building2.addEventListener('mouseover', hoverExtraBuilding2, false);
+        extra_building3.addEventListener('mouseover', hoverExtraBuilding3, false);
+        extra_building4.addEventListener('mouseover', hoverExtraBuilding4, false);
+        extra_building5.addEventListener('mouseover', hoverExtraBuilding5, false);
+        extra_building6.addEventListener('mouseover', hoverExtraBuilding5, false);
+
+    </script>
+
+</body>
