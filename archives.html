@@ -1,0 +1,890 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Miguel Divo</title>
+            <link rel="icon" href="index_resources/tab-logo3.png" type="image/x-icon">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    </head>
+
+    <style>
+        /* Default layout */
+        #archiveContainer {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        #tableCol, #archiveImgCol {
+            flex: 1;
+            /* height: 50vh; */
+            overflow-y: auto; /* To enable scrolling if content overflows */
+        }
+
+        /* Media query for smaller screens */
+        @media (max-width: 590px) {
+            #archiveContainer {
+                flex-direction: column; /* Stack columns vertically */
+                height: 50vh;
+                
+            }
+        }
+    </style>
+ 
+
+
+    <body>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk4vzc/dW8b5tv6v0w7pCqF5/2z2PpXhpz3q5t5z" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+
+
+        
+
+
+        <nav class="navbar sticky-top shadow-sm" id="navbar" style="background-color: rgb(255, 255, 255);">
+            <div class="container-fluid">
+                <div class="row align-items-center col-12 d-flex">
+                    <div id="logoname" class="col-1 " style="width: 70px;">
+                    <a class="navbar-brand padding-right-0" href="index.html">
+                            <img src="index_resources/logo2.png" alt="" width="50" height="50"  class="d-inline-block align-text-top">
+                        </a>
+                    </div>
+                    <div class="col d-flex">
+                        <a class="navbar-brand" href="index.html">
+                            MIGUEL<br>DIVO
+                        </a>
+                    </div>
+
+
+                    <div id="headerlinks" class="col d-flex justify-content-end align-items-center">
+                        <div id="project-item" class="dropdown">
+                            <a class="navbar-brand ms-auto dropdown-toggle" href="#" role="button" id="projectsDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                PROJECTS
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
+                                <li><a class="dropdown-item" href="code.html">CODE</a></li>
+                                <li><a class="dropdown-item" href="design.html">DESIGN</a></li>
+                                <li><a class="dropdown-item" href="sound.html">SOUND</a></li>
+                            </ul>
+                        </div>
+                        <a id="archive-item" class="navbar-brand ms-auto" href="archives.html">ARCHIVES</a>
+                        <a id="about-item" class="navbar-brand ms-auto" href="about.html">ABOUT</a>
+
+                        <div class="menu-botton-container" onclick="menuAnimate(this)">
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                            <div class="bar3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div id="overlay-menu">
+            <div id="menu-content">
+                <ul>
+                    <div class="dropdown" style="margin-bottom: 20px; margin-left: 13px;">
+                        <a class="navbar-brand ms-auto dropdown-toggle" href="#" role="button" id="projectsDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 1.5em;">
+                            PROJECTS
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
+                            <li><a class="dropdown-item" style="font-size: 1em;" href="code.html">CODE</a></li>
+                            <li><a class="dropdown-item" style="font-size: 1em;" href="design.html">DESIGN</a></li>
+                            <li><a class="dropdown-item" style="font-size: 1em;" href="sound.html">SOUND</a></li>
+                        </ul>
+                    </div>
+                    
+                    <li><a class="navbar-brand ms-auto" href="archives.html">ARCHIVES</a></li>
+                    <li><a class="navbar-brand ms-auto" href="about.html">ABOUT</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <script>
+            function menuAnimate(x) {
+                x.classList.toggle("change");
+                var overlayMenu = document.getElementById("overlay-menu");
+
+                if (overlayMenu.style.opacity === "0" || overlayMenu.style.opacity === "") {
+                    overlayMenu.style.display = "block";
+                    setTimeout(function () {
+                        overlayMenu.style.opacity = "1"; // Set opacity to 1 to fade in
+                    }, 10); // Add a small delay to ensure the display change takes effect before fading in
+                } else {
+                    overlayMenu.style.opacity = "0"; // Set opacity to 0 to fade out
+                    setTimeout(function () {
+                        overlayMenu.style.display = "none";
+                    }, 300); // Wait for the fade-out transition to complete before hiding
+                }
+            }
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    
+        <div id="archiveContainer" class="container-fluid row align-items-center border-bottom bottom-black" >
+            <div id="tableCol" class="col col-sm-6 col-md-6 col-lg-6 ">
+
+              
+                <div class="accordion accordion-flush rounded" id="accordionFlushExample">
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThirtyOne">
+                          <button onclick="changeImg31()" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThirtyOne" aria-expanded="false" aria-controls="flush-collapseThree">
+                            <code>2023 | &nbsp;</code>ParallelTracks ·&nbsp; <code>UI/UX Development</code>
+                          </button>
+                        </h2>
+                        <div id="flush-collapseThirtyOne" class="accordion-collapse collapse" aria-labelledby="flush-headingThirtyOne" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">ParallelTracks is a platform that connects music lovers with emerging and undiscovered artists who share similar musical identities, styles and sounds as their mainstream counterparts. 
+                            ParallelTracks provides a place where users can discover and support hidden gems in the vast music industry.
+                            <br>
+                            <br>
+                            The projects aim to create a user-friendly, interactive directory for comparisons between small and mainstream artist by implementing <code>Bootstrap</code> for the frontend styling, 
+                            and <code>HTML/JavaScript/CSS</code> for more styling and for frontend functionalities to communicated with the backend. The project will be developed using <code>Django</code> and <code>Python</code> and as the standard way of music recommendation from streaming services suggests songs that someone similar music taste enjoys.
+                            <a href="https://bit.ly/parallel-tracks" target="_blank">View website</a> &nbsp;
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThirty">
+                          <button onclick="changeImg30()" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThirty" aria-expanded="false" aria-controls="flush-collapseThree">
+                            <code>2023 | &nbsp;</code>Improving the UX at University ·&nbsp; <code>UX Research Case Study</code>
+                          </button>
+                        </h2>
+                        <div id="flush-collapseThirty" class="accordion-collapse collapse" aria-labelledby="flush-headingThirty" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">Looked into improving the UX at university for students. From improving the UI of <code>learning hubs</code>, to creating a <code>device ecosystem</code>, the study looks at all ascepts of student's study life.
+                            <a href="design_resources/ECS661U UX Design CW2 - Miguel Divo 200261001.pdf" target="_blank">View case study</a> &nbsp;
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwentyNine">
+                          <button onclick="changeImg29()" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwentyNine" aria-expanded="false" aria-controls="flush-collapseThree">
+                            <code>2023 | &nbsp;</code>UX Design Workshop ·&nbsp; <code>App Design</code>
+                          </button>
+                        </h2>
+                        <div id="flush-collapseTwentyNine" class="accordion-collapse collapse" aria-labelledby="flush-headingTwentyNine" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">Took part in a UX design workshop at <code>BrainStation London</code>. I was able to learn more about design thinking and the process of how a UX design goes from conception to production and learn industry insights from industry experts.
+                            We were tasked at using design thinking concepts to create a simple UX interface for a 'fresh market produce delivery app'. 
+                            <br>
+                            <br>
+                            Started with asking market-goers questions and figuring out problems to then sketching the interface in 5 minutes. 
+                            The sketches where imported into <code>Marvel App</code> on our phones the create a very quick wireframe from the sketches. We were then tasked to re-create the wireframe on <code>Figma</code> in just 30 minutes.
+                            Due to short time to create the wireframe, there are many components missing however, my design was votes <code>2nd Best Design</code> at the workshop, for its welcoming interface and detail in wireframing. 
+                            <a href="https://www.figma.com/file/6F8U0r2etoaRG6tzbcQkJJ/BrainStation-UX-Design-Workshop?node-id=0%3A1&t=xaUOstMiLKFocDfK-1" target="_blank">View project</a> &nbsp;
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwentyEight">
+                          <button onclick="changeImg28()" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwentyEight" aria-expanded="false" aria-controls="flush-collapseThree">
+                            <code>2023 | &nbsp;</code>Music Discovery Webiste Wireframing ·&nbsp; <code>Web Design</code>
+                          </button>
+                        </h2>
+                        <div id="flush-collapseTwentyEight" class="accordion-collapse collapse" aria-labelledby="flush-headingTwentyEight" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">Created a wireframe prototype for my final year project webiste using <code>Figma</code>. The website is suppose to enable listener to find small independent artists that have a similar musical identity to a more well-known/mainstream artist.
+                            The webiste would be a new to reccomend new music compared to the standard way streaming service; reccomending songs that you may like based on what other users with your music taste listen to. 
+                            <a href="https://www.figma.com/file/I5he18OebiyR9ypQo7ETef/fyp-interface-design?node-id=0%3A1&t=kSi0o2IBDeytiUkp-1" target="_blank">View project</a> &nbsp;
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwentySeven">
+                          <button onclick="changeImg27()" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwentySeven" aria-expanded="false" aria-controls="flush-collapseThree">
+                            <code>2022 | &nbsp;</code>Kill Bill Vol.1 ·&nbsp; <code>Sound Design</code>
+                          </button>
+                        </h2>
+                        <div id="flush-collapseTwentySeven" class="accordion-collapse collapse" aria-labelledby="flush-headingTwentySeven" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">Created an audio rendition of the infamous <i>"Showdown at the House of Blue Leaves"</i> fight scene in <i>Kill Bill Vol. 1</i>. Created the sound design, sondscape audio, mixing and mastering using <code>Logic Pro X</code>. Used free audio libraries to recreate certain actions by layering different audio files. 
+                            <a href="https://www.youtube.com/watch?v=UlkMggCHyuQ" target="_blank">View project</a> &nbsp;
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwentySix">
+                          <button onclick="changeImg26()" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwentySix" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            <code>2022 | &nbsp;</code>Chat · &nbsp;<code>Game Development</code>
+                          </button>
+                        </h2>
+                        <div id="flush-collapseTwentySix" class="accordion-collapse collapse" aria-labelledby="flush-headingTwentySix" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">Small team created a low-poly game, from the prespective of a controverial live-streamer who is trying to redeem themselves by doing whatever the live chat tells them. Game was created using <code>Unity 3D</code> and deloyed using <code>GitHub Pages</code>.
+                            <br><a href="https://kalina-ivanova28.github.io/657-Game/Build/index.html" target="_blank">Link to game</a></div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwentyFive">
+                          <button onclick="changeImg25()" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwentyFive" aria-expanded="false" aria-controls="flush-collapseOne">
+                            <code>2022 | &nbsp;</code>Auction App ·&nbsp; <code>Web Development</code>
+                          </button>
+                        </h2>
+                        <div id="flush-collapseTwentyFive" class="accordion-collapse collapse" aria-labelledby="flush-headingTwentyFive" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">Group project to create a Single Page Application (SPA) auction site similar to Ebay. We used <code>Django</code> to build the web API and <code>Vue/Vite</code> used to develop the frontend.
+                        <a href="https://drive.google.com/drive/folders/1CwbBcb-5K0piSJmDqWGl2eMxShKw2ldH?usp=share_link" target="_blank">Link to project</a></div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwentyFour">
+                          <button onclick="changeImg24()" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwentyFour" aria-expanded="false" aria-controls="flush-collapseThree">
+                            <code>2022 | &nbsp;</code>Balenciaga "Mud Show" ·&nbsp; <code>Sound Design</code>
+                          </button>
+                        </h2>
+                        <div id="flush-collapseTwentyFour" class="accordion-collapse collapse" aria-labelledby="flush-headingTwentyFour" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">Composed the musicscape for Balenciaga's 2023 Spring/Summer collection. Created the sound design using <code>Logic Pro X</code>. NOTE: This was created before the controversy was brought to light. 
+                            &nbsp;<a href="https://www.youtube.com/watch?v=ns63UMrTgDs" target="_blank">View project</a> &nbsp;
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwentyThree">
+                          <button onclick="changeImg23()" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwentyThree" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            <code>2022 | &nbsp;</code>Carchived ·&nbsp; <code>Web Design</code>
+                          </button>
+                        </h2>
+                        <div id="flush-collapseTwentyThree" class="accordion-collapse collapse" aria-labelledby="flush-headingTwentyThree" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">High-fidelity, wireframe web design for Carchived (Instagram page dedicated to cars), created using <code>Figma</code>.
+                            &nbsp; <a href="https://www.figma.com/file/4VaTgUePdeV4sbefPrH4OZ/carchived?node-id=0%3A1&t=a00ZZPkZTNEP7WGX-1" target="_blank">Link to project</a></div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwentyTwo">
+                          <button onclick="changeImg22()" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwentyTwo" aria-expanded="false" aria-controls="flush-collapseOne">
+                            <code>2022 | &nbsp;</code>Car Collection App ·&nbsp; <code>Web Development</code>
+                          </button>
+                        </h2>
+                        <div id="flush-collapseTwentyTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwentyTwo" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">Developed a simple <code>Vue/Ajax</code> frontend and <code>Django</code> backend for a simple web API. Created a simple page that stores data for a car sale collection.
+                            &nbsp;<a href="https://drive.google.com/drive/folders/1ai2eUaX45BgXPI_N6ulllx9lg0xJ9h7i?usp=share_link" target="_blank">Link to project</a></div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwentyOne">
+                        <button onclick="changeImg21()" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwentyOne" aria-expanded="false" aria-controls="flush-collapseThree">
+                            <code>2022 | &nbsp;</code>Archive Radio ·&nbsp; <code>Web Design</code>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwentyOne" class="accordion-collapse collapse" aria-labelledby="flush-headingTwentyOne" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Created a high-fidelity web design and graphics prototype for a single page application using <code>Figma</code>. Will be developing the page and adding radio episodes of my own music/mixes.
+                            <a href="https://www.figma.com/file/HIWfu6AyYGb06NDAL23U8M/Archive-Radio?node-id=0%3A1&t=Ta1eK57sY9Aq4AGm-1" target="_blank">Link to project</a></div>
+                    </div>
+                    </div>
+                
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwenty">
+                            <button onclick="changeImg20()" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwenty" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                <code>2022 | &nbsp;</code>Visual Code ·&nbsp; <code>Programming</code>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwenty" class="accordion-collapse collapse" aria-labelledby="flush-headingTwenty" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Created abstract visuals using <code>JavaScript</code>.
+                            <a href="https://drive.google.com/drive/folders/1YLGteb7nLCEjLAUSpdVittl31l8JRqOK?usp=share_link" target="_blank">Link to project</a></div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingNineteen">
+                            <button onclick="changeImg19()" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNineteen" aria-expanded="false" aria-controls="flush-collapseOne">
+                                <code>2022 | &nbsp;</code>Pastry Product Label Design ·&nbsp; <code>Product Design</code>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseNineteen" class="accordion-collapse collapse" aria-labelledby="flush-headingNineteen" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Designed mockups and final drafts of labels for product packaging for a Venezuelan home pastry business using <code>Adobe Photoshop</code>. Created designs for different types of labels and utilising different typefaces.
+                            <a href="" target="_blank">Link to project</a></div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingEighteen">
+                          <button onclick="changeImg18()" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEighteen" aria-expanded="false" aria-controls="flush-collapseThree">
+                            <code>2022 | &nbsp;</code>Budget Report Approval ·&nbsp; <code>Programming</code>
+                          </button>
+                        </h2>
+                        <div id="flush-collapseEighteen" class="accordion-collapse collapse" aria-labelledby="flush-headingEighteen" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">Created a budget report approval form system using <code>Microsoft SharePoint</code>, <code>Power Automate</code> and <code>Workflow</code>. </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingSeventeen">
+                          <button onclick="changeImg17()" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeventeen" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            <code>2022 | &nbsp;</code>Architect Metaverse Paper ·&nbsp; <code>Physical Computing</code>
+                          </button>
+                        </h2>
+                        <div id="flush-collapseSeventeen" class="accordion-collapse collapse" aria-labelledby="flush-headingSeventeen" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">Creative group project where we had to conceptualise a new collaborative tool for the <code>Metaverse</code>. Looked into how architects and how they collaborate when they cannot be in the same workspace at the same time. We came up with the idea of using tracing paper with <code>RFID tags</code> and drawing board contain a maxtrix of <code>RFID scanners</code> to map sketches into an online software. The software would allow different users to work on the same sketch from their remote workspaces. We used <code>RFID tags</code> and an <code>Arduino</code> to create a low-fidelity prototype.
+                        <a href="https://drive.google.com/drive/folders/1U6vCPo2uYpeWgwj-VC9jdpiyJKl9VVDI?usp=share_link" target="_blank">Link to project</a></div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingSixteen">
+                          <button onclick="changeImg16()" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSixteen" aria-expanded="false" aria-controls="flush-collapseOne">
+                            <code>2022 | &nbsp;</code>StyleSky Weather App GUI ·&nbsp; <code>UI/UX Design</code>
+                          </button>
+                        </h2>
+                        <div id="flush-collapseSixteen" class="accordion-collapse collapse" aria-labelledby="flush-headingSixteen" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">Group project to create the GUI for a fashion-based weather app that reccomends certain clothing items depending on the weather. Designed using <code>Figma</code> and developed using <code>ReactJS</code>.
+                        <a href="https://drive.google.com/drive/folders/1kpsRF62X2LuB1EyvIg6xFJYbpEPaSdva?usp=share_link" target="_blank">Link to project</a></div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFifteen">
+                          <button onclick="changeImg15()" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFifteen" aria-expanded="false" aria-controls="flush-collapseThree">
+                            <code>2022 | &nbsp;</code>Batmobile Sound Recreation ·&nbsp; <code>Audio Computing</code>
+                          </button>
+                        </h2>
+                        <div id="flush-collapseFifteen" class="accordion-collapse collapse" aria-labelledby="flush-headingFifteen" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">Recreation of the <i>Batmobile</i> from <i>Batman</i> 2022 movie using <code>web audio API</code> to create different <code>noise generators</code> and <code>Garageband</code> to manipulate an audio file.
+                        <a href="./batman/index.html" target="_blank">Link to project</a></div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingForteen">
+                          <button onclick="changeImg14()" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseForteen" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            <code>2021 | &nbsp;</code>Arduino MIDI Controller ·&nbsp; <code>Physical Computing</code>
+                          </button>
+                        </h2>
+                        <div id="flush-collapseForteen" class="accordion-collapse collapse" aria-labelledby="flush-headingForteen" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">Created a MIDI controller that can control knobs and buttons on any DAW (Digital Audio Workshop) using an <code>Arduino</code>.
+                        <a href="https://drive.google.com/drive/folders/1BiLtakAiWKKlj5Uc15P3p-8VgBVkNB7D?usp=share_link" target="_blank">Link to project</a></div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThirteen">
+                          <button onclick="changeImg13()" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThirteen" aria-expanded="false" aria-controls="flush-collapseOne">
+                            <code>2021 | &nbsp;</code>EuroStar Database ·&nbsp; <code>Programming</code>
+                          </button>
+                        </h2>
+                        <div id="flush-collapseThirteen" class="accordion-collapse collapse" aria-labelledby="flush-headingThirteen" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">Using <code>SQL</code> to model a database that routes trains with different stations, keep track of each trip, the employees invloved in the trip, and the number and type of passengers in each trip.
+                        <a href="https://drive.google.com/drive/folders/1kH7CwVSX2Z4_trsae0dOEp8-1TipkUGv?usp=share_link" target="_blank">Link to project</a></div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwelve">
+                          <button onclick="changeImg12()" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwelve" aria-expanded="false" aria-controls="flush-collapseThree">
+                            <code>2021 | &nbsp;</code>The Dreamer ·&nbsp; <code>Game Design</code>
+                          </button>
+                        </h2>
+                        <div id="flush-collapseTwelve" class="accordion-collapse collapse" aria-labelledby="flush-headingTwelve" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">Desgined the storyboard, game world, characters for a lofi game. Bsed on a character who wakes up in a labyrinth of empty rooms and tries to escape but encoounters an ominous dark shadow called the <i>Sleepwalker</i>. The character's objective is to survive inorder to make it to the next day. Designed usind <code>Abode Photoshop</code> and developed using <code>SVGs</code> and <code>HTML</code>.
+                        <br>
+                        <a href="https://drive.google.com/drive/folders/15bn5hY4upm7koWFaoDn0gqQuEvQmDaLZ?usp=share_link" target="_blank">Link to project</a></div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingEleven">
+                          <button onclick="changeImg11()" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEleven" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            <code>2021 | &nbsp;</code>Design Portfolio ·&nbsp; <code>Design</code>
+                          </button>
+                        </h2>
+                        <div id="flush-collapseEleven" class="accordion-collapse collapse" aria-labelledby="flush-headingEleven" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">A portfolio containing all design project is produced between 2020 to 2021. Created using <code>Adobe Photoshop</code>. 
+                        <a href="https://drive.google.com/drive/folders/1gG4r8-75EzIg6TQOiIBQ_tW9dVxSLvSA?usp=share_link" target="_blank">Link to portfolio</a></div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTen">
+                          <button onclick="changeImg10()" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseOne">
+                            <code>2021 | &nbsp;</code>Music Promo Posters ·&nbsp; <code>Design</code>
+                          </button>
+                        </h2>
+                        <div id="flush-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-headingTen" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">Digital posters to promote singles and an EP. Created using <code>Adobe Photoshop</code>. 
+                        
+                        <a href="https://www.instagram.com/miggydivo/?hl=en" target="_blank">Link to project</a></div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingNine">
+                          <button onclick="changeImg9()" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseThree">
+                            <code>2021 | &nbsp;</code>Spotify Canvas Videos ·&nbsp; <code>Design</code>
+                          </button>
+                        </h2>
+                        <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">Produced video promos for an EP which are also used for Spotify's song canvas feature. Created using <code>Adobe Photoshop</code>. 
+                        <a href="https://www.tiktok.com/@miguel.divo/video/6952876488899218689?is_from_webapp=1&sender_device=pc&web_id=7065741071129036293" target="_blank">Link to Project</a></div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingEight">
+                          <button onclick="changeImg8()" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            <code>2021 | &nbsp;</code>Album Covers & Music ·&nbsp; <code>Design / Music</code>
+                          </button>
+                        </h2>
+                        <div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">Album covers created using <code>Adobe Photoshop</code> and music created using <code>GarageBand</code>. 
+                        <a href="https://linktr.ee/mdivo" target="_blank">Link to project</a></div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingSeven">
+                          <button onclick="changeImg7()" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseOne">
+                            <code>2020 | &nbsp;</code>Data Visualisation ·&nbsp; <code>Data Visualisation</code>
+                          </button>
+                        </h2>
+                        <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">Using <code>minimalistic Swiss style</code>, I visualed data collected of my weekly music listening with detailed analysis of certain music information. Created using <code>Krita</code>. 
+                        <a href="https://drive.google.com/drive/folders/1qBlxfiAmCapZwSzKv00Hn_aY93W3kyE6?usp=share_link" target="_blank">Link to project</a></div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingSix">
+                          <button onclick="changeImg6()" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseThree">
+                            <code>2020 | &nbsp;</code>ATM Bank ·&nbsp; <code>Programming</code>
+                          </button>
+                        </h2>
+                        <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">ATM created using <code>Java</code>. 
+                        <a href="https://drive.google.com/drive/folders/1TuBNtZNufrIV5bi2oNkbqHzuyo7XGMQQ?usp=share_link" target="_blank">Link to project</a></div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFive">
+                          <button onclick="changeImg5()" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            <code>2020 | &nbsp;</code>Student Management System ·&nbsp; <code>Programming</code>
+                          </button>
+                        </h2>
+                        <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">Student management system created using <code>Java</code>. 
+                        <a href="https://drive.google.com/drive/folders/1s4gdSdTSnhP8187tEE3vY4Lyv90PN8vD?usp=share_link" target="_blank">Link to project</a></div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFour">
+                          <button onclick="changeImg4()" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseOne">
+                            <code>2020 | &nbsp;</code>Text-based Game ·&nbsp; <code>Programming</code>
+                          </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body"><i>Dungeons and Dragons</i> inspired text-based game created using <code>Java</code>. 
+                        <a href="https://drive.google.com/drive/folders/1JKwwfhv50HLhRgO9adICjcYVF1CrnjY9?usp=share_link" target="_blank">Link to project</a></div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-headingThree">
+                        <button onclick="changeImg3()" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            <code>2020 | &nbsp;</code>Sound Page ·&nbsp; <code>SVG Programming</code>
+                        </button>
+                      </h2>
+                      <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Interactive sound information page created using <code>SVGs</code> and <code>HTML</code>. 
+                        <a href="./miniproject-2/index.html" target="_blank">Link to project</a></div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-headingTwo">
+                        <button onclick="changeImg2()" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            <code>2020 | &nbsp;</code>University Map ·&nbsp; <code>SVG Programming</code>
+                        </button>
+                      </h2>
+                      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Interactive map page created using <code>SVGs</code> and <code>HTML</code>. 
+                            <a href="./miniproject-1/interactive-map.html" target="_blank">Link to project</a></div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-headingOne">
+                        <button onclick="changeImg1()" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            <code>2019 | &nbsp;</code>Android Fitness App ·&nbsp; <code>App Development</code>
+                        </button>
+                      </h2>
+                      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Offline fitness app created using <code>Android Studio</code>. 
+                        <a href="https://drive.google.com/drive/folders/1K_8L5m6Q1R2f6DQmTGCF5_hUTR7Q9uQg?usp=share_link" target="_blank">Link to project</a></div>
+                      </div>
+                    </div>
+
+
+                </div>
+
+
+
+
+                
+            </div>
+            <div id="archiveImgCol" class="col col-sm-6 col-md-6 col-lg-6 ">
+      
+                <img id="archiveImg" src="archivePics/pdf31.png">
+
+            </div>
+
+           
+
+
+        </div>
+    
+    </body>
+</html>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+
+
+<script type="text/javascript" >
+
+    var image = document.querySelector("#archiveImg");
+
+    function changeImg1(){
+        image.src = "archivePics/pdf1.png"; 
+    }
+
+    function changeImg2(){
+        image.src = "archivePics/pdf2.png"; 
+    }
+
+    function changeImg3(){
+        image.src = "archivePics/pdf3.png"; 
+    }
+
+    function changeImg4(){
+        image.src = "archivePics/pdf4.png"; 
+    }
+
+    function changeImg5(){
+        image.src = "archivePics/pdf5.png"; 
+    }
+
+    function changeImg6(){
+        image.src = "archivePics/pdf6.png"; 
+    }
+
+    function changeImg7(){
+        image.src = "archivePics/pdf7.png"; 
+    }
+
+    function changeImg8(){
+        image.src = "archivePics/pdf8.png"; 
+    }
+
+    function changeImg9(){
+        image.src = "archivePics/pdf9.png"; 
+    }
+
+    function changeImg10(){
+        image.src = "archivePics/pdf10.png"; 
+    }
+
+    function changeImg11(){
+        image.src = "archivePics/pdf11.png"; 
+    }
+
+    function changeImg12(){
+        image.src = "archivePics/pdf12.png"; 
+    }
+
+    function changeImg13(){
+        image.src = "archivePics/pdf13.png"; 
+    }
+
+    function changeImg14(){
+        image.src = "archivePics/pdf14.png"; 
+    }
+
+    function changeImg15(){
+        image.src = "archivePics/pdf15.png"; 
+    }
+
+    function changeImg16(){
+        image.src = "archivePics/pdf16.png"; 
+    }
+
+    function changeImg17(){
+        image.src = "archivePics/pdf17.png"; 
+    }
+
+    function changeImg18(){
+        image.src = "archivePics/pdf18.png"; 
+    }
+
+    function changeImg19(){
+        image.src = "archivePics/pdf19.png"; 
+    }
+
+    function changeImg20(){
+        image.src = "archivePics/pdf20.png"; 
+    }
+
+    function changeImg21(){
+        image.src = "archivePics/pdf21.png"; 
+    }
+
+    function changeImg22(){
+        image.src = "archivePics/pdf22.png"; 
+    }
+
+    function changeImg23(){
+        image.src = "archivePics/pdf23.png"; 
+    }
+
+    function changeImg24(){
+        image.src = "archivePics/pdf24.png"; 
+    }
+
+    function changeImg25(){
+        image.src = "archivePics/pdf25.png"; 
+    }
+
+    function changeImg26(){
+        image.src = "archivePics/pdf26.png"; 
+    }
+
+    function changeImg27(){
+        image.src = "archivePics/pdf27.png"; 
+    }
+
+    function changeImg28(){
+        image.src = "archivePics/pdf28.png"; 
+    }
+
+    function changeImg29(){
+        image.src = "archivePics/pdf29.png"; 
+    }
+
+    function changeImg30(){
+        image.src = "archivePics/pdf30.png"; 
+    }
+
+    function changeImg31(){
+        image.src = "archivePics/pdf31.png"; 
+    }
+
+
+</script>
+
+<style>
+    #archiveContainer{
+        height: 90vh;
+        padding: 0;
+
+        
+    }
+
+    #tableCol #accordionFlushExample{
+        height: 90vh;
+    }
+    #tableCol {
+        padding: 0;
+    }
+
+    #accordionFlushExample{
+        background-color: transparent;
+        overflow-y: scroll;
+    }
+
+
+
+    #archiveImgCol{
+        height: 90vh;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+    }
+
+
+
+    #archiveImg{
+
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        overflow: hidden;    
+
+    }
+</style>
+
+
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen&display=swap');
+
+    
+</style>
+
+
+<style>
+    .fancy-font{
+        font-family: 'Adobe-Caslon-Pro';
+    }
+</style>
+
+<style>
+#overlay-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255); /* Semi-transparent white background */
+    z-index: 1000;
+    opacity: 0; /* Initially, set opacity to 0 */
+    transition: opacity 0.8s ease; /* Transition for opacity property */
+}
+
+#menu-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+
+#menu-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#menu-content ul li {
+    margin-bottom: 20px;
+}
+
+#menu-content ul li a {
+    color: #000000;
+    font-size: 24px;
+    text-decoration: none;
+}
+</style>
+
+<style>
+
+@media (max-width: 575px) { 
+    #quick-info-page-section {
+        margin-top: 90.5vh; 
+    }
+}
+</style>
+
+<style>
+/* Styles for screens 591px or higher */
+@media (min-width: 592px) {
+    #project-item, #archive-item, #about-item {
+        display: block !important;
+    }
+
+    .menu-botton-container {
+        display: none;
+    }
+}
+
+/* Styles for screens 590px or lower */
+@media (max-width: 590px) {
+    #project-item, #archive-item, #about-item {
+        display: none !important;
+    }
+
+    .menu-botton-container {
+        display: inline-block;
+    }
+}
+
+.menu-botton-container {
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 2px;
+    background-color: #333;
+    margin: 9px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+</style>
+
+<style>
+
+    .no-margin {
+        margin: 0 !important;
+    }
+
+    .full-width {
+        width: 100vw;
+    }
+
+    .four-col-height {
+        height: 22.625vh; 
+    }
+  
+    .full-1st-height {
+        height: 90.5vh; 
+    }
+
+    .font-weight-normal {
+        font-weight: 400!important;
+    }
+    .text-dark {
+        color: #343a40!important;
+    }
+
+    html{
+        font-size: 100%;
+    }
+
+    .font-size-for-scroll{
+        font-size: 0.8rem;
+    }
+
+
+    .oval-image {
+        width: 77vw; 
+        height: 50vh;
+        overflow: hidden;
+        border-radius: 50%; 
+    }
+
+    .oval-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+  
+</style>

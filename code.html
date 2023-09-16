@@ -1,0 +1,665 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Miguel Divo</title>
+        <link rel="icon" href="index_resources/tab-logo3.png" type="image/x-icon">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    </head>
+
+
+    <body>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk4vzc/dW8b5tv6v0w7pCqF5/2z2PpXhpz3q5t5z" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+
+
+        
+
+
+        <nav class="navbar sticky-top shadow-sm" id="navbar" style="background-color: rgb(255, 255, 255);">
+            <div class="container-fluid">
+                <div class="row align-items-center col-12 d-flex">
+                    <div id="logoname" class="col-1 " style="width: 70px;">
+                    <a class="navbar-brand padding-right-0" href="index.html">
+                            <img src="index_resources/logo2.png" alt="" width="50" height="50"  class="d-inline-block align-text-top">
+                        </a>
+                    </div>
+                    <div class="col d-flex">
+                        <a class="navbar-brand" href="index.html">
+                            MIGUEL<br>DIVO
+                        </a>
+                    </div>
+
+
+                    <div id="headerlinks" class="col d-flex justify-content-end align-items-center">
+                        <div id="project-item" class="dropdown">
+                            <a class="navbar-brand ms-auto dropdown-toggle" href="#" role="button" id="projectsDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                PROJECTS
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
+                                <li><a class="dropdown-item" href="code.html">CODE</a></li>
+                                <li><a class="dropdown-item" href="design.html">DESIGN</a></li>
+                                <li><a class="dropdown-item" href="sound.html">SOUND</a></li>
+                            </ul>
+                        </div>
+                        <a id="archive-item" class="navbar-brand ms-auto" href="archives.html">ARCHIVES</a>
+                        <a id="about-item" class="navbar-brand ms-auto" href="about.html">ABOUT</a>
+
+                        <div class="menu-botton-container" onclick="menuAnimate(this)">
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                            <div class="bar3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div id="overlay-menu">
+            <div id="menu-content">
+                <ul>
+                    <div class="dropdown" style="margin-bottom: 20px; margin-left: 13px;">
+                        <a class="navbar-brand ms-auto dropdown-toggle" href="#" role="button" id="projectsDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 1.5em;">
+                            PROJECTS
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
+                            <li><a class="dropdown-item" style="font-size: 1em;" href="code.html">CODE</a></li>
+                            <li><a class="dropdown-item" style="font-size: 1em;" href="design.html">DESIGN</a></li>
+                            <li><a class="dropdown-item" style="font-size: 1em;" href="sound.html">SOUND</a></li>
+                        </ul>
+                    </div>
+                    
+                    <li><a class="navbar-brand ms-auto" href="archives.html">ARCHIVES</a></li>
+                    <li><a class="navbar-brand ms-auto" href="about.html">ABOUT</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <script>
+            function menuAnimate(x) {
+                x.classList.toggle("change");
+                var overlayMenu = document.getElementById("overlay-menu");
+
+                if (overlayMenu.style.opacity === "0" || overlayMenu.style.opacity === "") {
+                    overlayMenu.style.display = "block";
+                    setTimeout(function () {
+                        overlayMenu.style.opacity = "1"; // Set opacity to 1 to fade in
+                    }, 10); // Add a small delay to ensure the display change takes effect before fading in
+                } else {
+                    overlayMenu.style.opacity = "0"; // Set opacity to 0 to fade out
+                    setTimeout(function () {
+                        overlayMenu.style.display = "none";
+                    }, 300); // Wait for the fade-out transition to complete before hiding
+                }
+            }
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    
+    
+
+
+
+        <div id="quick-info-page-section" class="container-fluid full-1st-height full-width ">
+            <div class="row " style="height: 70vh; justify-content: center; align-items: center;">
+                
+                
+                <style>
+                    .oval-image {
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      text-align: center;
+                      position: relative;
+                      transition: filter 0.3s;
+                      background-color: rgba(47, 29, 124, 0.75);
+                    }
+                  
+                    .oval-image video {
+                      position: absolute;
+                      width: 125%;
+                      height: 125%;
+                      object-fit: cover;
+                      z-index: -1;
+                    }
+                  
+                    .oval-image .content {
+                      height: 42vh;
+                      width: 40vw;
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;
+                      justify-content: space-between;
+                      overflow: hidden;
+                      position: relative;
+                      z-index: 1;
+                      color: rgb(255, 255, 255);
+                      
+                    }
+                  
+                    .oval-image:hover {
+                      filter: invert(100%);
+                    }
+                </style>
+                  
+                <div class="oval-image ">
+                    <video autoplay muted loop>
+                        <source src="code_resources/code-oval.mov" type="video/mp4">
+                        
+                    </video>
+                    <div class="content">
+                        <p style="font-size: 0.7rem; margin-top: 0;">LET'S CHECK OUT SOME <i class="fancy-font">Project</i></p>
+                        <p style="font-size: 2rem;">PROJECTS INVOLVING <i class="fancy-font">Code</i><br> CAN BE FOUND HERE </p>
+                        <p style="font-size: 0.7rem; margin-bottom: 0;">Explore all my <i class="fancy-font">Code</i> projects below. Click on any project and it will take you to the project.</p>
+                    </div>
+                </div>
+                  
+    
+    
+            </div>
+    
+            
+            <div class="col-12 ">
+                <div class="row">
+            
+                    <div class="col-12" style="height: 14vh;">
+                        <p style="font-size: 2rem; padding-top: 5vh; padding-bottom: 0px; margin-bottom: 0px;">CODE <i class="fancy-font">Projects</i></p>
+                        <hr style="color: #000000; height: 12px; margin-top: 0px;">
+                    </div>
+            
+                    <!-- Card 1 -->
+                    <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center">
+                        <div class="card" style="width: 90%; height: 100%; margin-bottom: 2vh; border-color: rgb(255, 255, 255);">
+                            <a href="https://bit.ly/parallel-tracks" target="_blank" style="text-decoration: none !important; color: #000000 !important;">
+                                <ul class="list-group list-group-flush"">
+                                    <li class="list-group-item" style="font-weight:300; font-size: 0.9em;">No. ① - UI / UX DEVELOPMENT</li>
+                                </ul>
+                                <img class="rounded-5" src="index_resources/no1-latest.png" style="width: 100%; height: 40vh; object-fit: cover;">
+                                <div class="card-body" >
+                                    <h5 class="card-title-projects-1" style="font-weight: 400;">PARALLELTRACKS <i class="fancy-font"> May, 2023</i></h5>
+                                    <p class="card-text">Undergraduate dissertation project, focused on the <i class="fancy-font">UI</i>, <i class="fancy-font">User Research</i>, and <i class="fancy-font">Web Development</i>. <i class="fancy-font">Django</i> and <i class="fancy-font">Bootstrap</i> used for the development.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+    
+                    <!-- Card 2 -->
+                    <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center">
+                        <div class="card" style="width: 90%; height: 100%; margin-bottom: 2vh; border-color: rgb(255, 255, 255);">
+                            <a href="https://kalina-ivanova28.github.io/657-Game/Build/index.html" target="_blank" style="text-decoration: none !important; color: #000000 !important;">
+                                <ul class="list-group list-group-flush"">
+                                    <li class="list-group-item" style="font-weight:300; font-size: 0.9em;">No. ② - GAME DEVELOPMENT</li>
+                                </ul>
+                                <img class=" rounded-5" src="index_resources/no4-latest.png" style="width: 100%; height: 40vh; object-fit: cover;">
+                                <div class="card-body" >
+                                    <h5 class="card-title-projects-4" style="font-weight: 400;">CHAT<i class="fancy-font"> Nov, 2022</i></h5>
+                                    <p class="card-text">Created a <i class="fancy-font">low-poly game</i>, from the prespective of a controverial live-streamer, trying to redeem themselves. Created using <i class="fancy-font">Unity</i>.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+            
+                    <!-- Card 3 -->
+                    <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center">
+                        <div class="card" style="width: 90%; height: 100%; margin-bottom: 2vh; border-color: rgb(255, 255, 255);">
+                            <a href="https://drive.google.com/drive/folders/1CwbBcb-5K0piSJmDqWGl2eMxShKw2ldH?usp=drive_link" target="_blank" style="text-decoration: none !important; color: #000000 !important;">
+                                <ul class="list-group list-group-flush"">
+                                    <li class="list-group-item" style="font-weight:300; font-size: 0.9em;">No. ③ - WEB DEVELOPMENT</li>
+                                </ul>
+                                <img class="rounded-5" src="code_resources/code-auction.png" style="width: 100%; height: 40vh; object-fit: cover;">
+                                <div class="card-body" >
+                                    <h5 class="card-title-projects-2" style="font-weight: 400;">AUCTION WEB APP<i class="fancy-font"> Dec, 2022</i></h5>
+                                    <p class="card-text">Created a <i class="fancy-font">Single Page Application (SPA)</i> auction site similar to Ebay. <i class="fancy-font">Django</i> was used for the web API, and <i class="fancy-font">Vue/Vite</i> to develop a simple frontend.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+    
+                    <!-- Card 4 -->
+                    <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center">
+                        <div class="card" style="width: 90%; height: 100%; margin-bottom: 2vh; border-color: rgb(255, 255, 255);">
+                            <a href="https://drive.google.com/drive/folders/1ai2eUaX45BgXPI_N6ulllx9lg0xJ9h7i?usp=drive_link" target="_blank" style="text-decoration: none !important; color: #000000 !important;">
+                                <ul class="list-group list-group-flush"">
+                                    <li class="list-group-item" style="font-weight:300; font-size: 0.9em;">No. ④ - WEB DEVELOPMENT</li>
+                                </ul>
+                                <img class=" rounded-5" src="code_resources/code-carweb.png" style="width: 100%; height: 40vh; object-fit: cover;">
+                                <div class="card-body" >
+                                    <h5 class="card-title-projects-4" style="font-weight: 400;">CAR COLLECTION WEB APP<i class="fancy-font"> Nov, 2022</i></h5>
+                                    <p class="card-text">Developed a simple <i class="fancy-font">Vue/Ajax</i> frontend and <i class="fancy-font">Django</i> backend for a simple API.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <!-- Card 5 -->
+                    <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center">
+                        <div class="card" style="width: 90%; height: 100%; margin-bottom: 2vh; border-color: rgb(255, 255, 255);">
+                            <a href="https://drive.google.com/drive/folders/1YLGteb7nLCEjLAUSpdVittl31l8JRqOK?usp=drive_link" target="_blank" style="text-decoration: none !important; color: #000000 !important;">
+                                <ul class="list-group list-group-flush"">
+                                    <li class="list-group-item" style="font-weight:300; font-size: 0.9em;">No. ⑤ - JAVASCRIPT PROGRAMMING</li>
+                                </ul>
+                                <img class="rounded-5" src="code_resources/code-visualcode.png" style="width: 100%; height: 40vh; object-fit: cover;">
+                                <div class="card-body" >
+                                    <h5 class="card-title-projects-1" style="font-weight: 400;">VISUAL CODE <i class="fancy-font"> Aug, 2022</i></h5>
+                                    <p class="card-text">Created abstract visuals using <i class="fancy-font">JavaScript</i>.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+    
+                    <!-- Card 6 -->
+                    <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center">
+                        <div class="card" style="width: 90%; height: 100%; margin-bottom: 2vh; border-color: rgb(255, 255, 255);">
+                            <a href="" target="_blank" style="text-decoration: none !important; color: #000000 !important;">
+                                <ul class="list-group list-group-flush"">
+                                    <li class="list-group-item" style="font-weight:300; font-size: 0.9em;">No. ⑥ - POWER AUTOMATE DEVELOPMENT</li>
+                                </ul>
+                                <img class="rounded-5" src="" style="width: 100%; height: 40vh; object-fit: cover;">
+                                <div class="card-body" >
+                                    <h5 class="card-title-projects-2" style="font-weight: 400;">BUDGET REPORT APPROVAL<i class="fancy-font"> Sep, 2022</i></h5>
+                                    <p class="card-text">Created a budget report approval form system using <i class="fancy-font">Microsoft Sharepoint</i>, <i class="fancy-font">Power Automate</i> and <i class="fancy-font">Workflow</i>. Created for <i class="fancy-font">Arena Europe, Middle East & Asia</i>.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+            
+                    <!-- Card 7 -->
+                    <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center">
+                        <div class="card" style="width: 90%; height: 100%; margin-bottom: 2vh; border-color: rgb(255, 255, 255);">
+                            <a href="https://drive.google.com/drive/folders/1U6vCPo2uYpeWgwj-VC9jdpiyJKl9VVDI?usp=share_link" target="_blank" style="text-decoration: none !important; color: #000000 !important;">
+                                <ul class="list-group list-group-flush"">
+                                    <li class="list-group-item" style="font-weight:300; font-size: 0.9em;">No. ⑦ - PHYSICAL COMPUTING</li>
+                                </ul>
+                                <img class="rounded-5 border" src="code_resources/meta-paper.png" style="width: 100%; height: 40vh; object-fit: cover;">
+                                <div class="card-body" >
+                                    <h5 class="card-title-projects-2" style="font-weight: 400;">ARCHITECT METAVERSE PAPER <i class="fancy-font"> Apr, 2022</i></h5>
+                                    <p class="card-text">Creative group project where we had to conceptualise anew collaborative tool for <i class="fancy-font">Mateverse</i>. Prototype created using a maxtrix of <i class="fancy-font">RFID Scanners</i> to map sketches into an online software.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+    
+                    <!-- Card 8 -->
+                    <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center">
+                        <div class="card" style="width: 90%; height: 100%; margin-bottom: 2vh; border-color: rgb(255, 255, 255);">
+                            <a href="batman/index.html" target="_blank" style="text-decoration: none !important; color: #000000 !important;">
+                                <ul class="list-group list-group-flush"">
+                                    <li class="list-group-item" style="font-weight:300; font-size: 0.9em;">No. ⑧ - AUDIO COMPUTING</li>
+                                </ul>
+                                <img class=" rounded-5 border" src="code_resources/batman-sound.png" style="width: 100%; height: 40vh; object-fit: cover;">
+                                <div class="card-body" >
+                                    <h5 class="card-title-projects-4" style="font-weight: 400;">DIGITAL SOUND RECREATION<i class="fancy-font"> Apr, 2022</i></h5>
+                                    <p class="card-text">Recreation of the <i class="fancy-font">Batmobile</i> from the <i class="fancy-font">Batman 2022</i> movie, using <i class="fancy-font">Web Audio API</i> to create different <i class="fancy-font">Noise Generators</i>.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 9 -->
+                    <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center">
+                        <div class="card" style="width: 90%; height: 100%; margin-bottom: 2vh; border-color: rgb(255, 255, 255);">
+                            <a href="https://drive.google.com/drive/folders/1BiLtakAiWKKlj5Uc15P3p-8VgBVkNB7D?usp=share_link" target="_blank" style="text-decoration: none !important; color: #000000 !important;">
+                                <ul class="list-group list-group-flush"">
+                                    <li class="list-group-item" style="font-weight:300; font-size: 0.9em;">No. ⑨ - PHYSICAL COMPUTING</li>
+                                </ul>
+                                <img class="rounded-5" src="code_resources/midi-controller.png" style="width: 100%; height: 40vh; object-fit: cover;">
+                                <div class="card-body" >
+                                    <h5 class="card-title-projects-1" style="font-weight: 400;">ARDUINO MIDI CONTROLLER <i class="fancy-font"> Mar, 2022</i></h5>
+                                    <p class="card-text">Created a MIDI controller that can control knobs and buttons on any <i class="fancy-font">Digital Audio Workshop</i> using an <i class="fancy-font">Arduino</i>.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+    
+                    <!-- Card 10 -->
+                    <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center">
+                        <div class="card" style="width: 90%; height: 100%; margin-bottom: 2vh; border-color: rgb(255, 255, 255);">
+                            <a href="https://drive.google.com/drive/folders/1kH7CwVSX2Z4_trsae0dOEp8-1TipkUGv?usp=share_link" target="_blank" style="text-decoration: none !important; color: #000000 !important;">
+                                <ul class="list-group list-group-flush"">
+                                    <li class="list-group-item" style="font-weight:300; font-size: 0.9em;">No. ①⓪ - SQL DEVELOPMENT</li>
+                                </ul>
+                                <img class="rounded-5 border" src="code_resources/sql-database.png" style="width: 100%; height: 40vh; object-fit: cover;">
+                                <div class="card-body" >
+                                    <h5 class="card-title-projects-2" style="font-weight: 400;">EUROSTAR DATABASE <i class="fancy-font"> Dec, 2021</i></h5>
+                                    <p class="card-text">Using <i class="fancy-font">SQL</i> to model a database that routes trains with different stations, keeps track of each trip, the employees involved in the trip, and the number and type of passengers in each trip.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+            
+                    <!-- Card 11 -->
+                    <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center">
+                        <div class="card" style="width: 90%; height: 100%; margin-bottom: 2vh; border-color: rgb(255, 255, 255);">
+                            <a href="miniproject-2/index.html" target="_blank" style="text-decoration: none !important; color: #000000 !important;">
+                                <ul class="list-group list-group-flush"">
+                                    <li class="list-group-item" style="font-weight:300; font-size: 0.9em;">No. ①① - SVG PROGRAMMING</li>
+                                </ul>
+                                <img class="rounded-5 border" src="code_resources/sound-svg.png" style="width: 100%; height: 40vh; object-fit: cover;">
+                                <div class="card-body" >
+                                    <h5 class="card-title-projects-2" style="font-weight: 400;">SOUND PAGE <i class="fancy-font"> May, 2020</i></h5>
+                                    <p class="card-text">Interactive sound information page created using <i class="fancy-font">SVG</i> and <i class="fancy-font">HTML</i>.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+    
+                    <!-- Card 12 -->
+                    <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center">
+                        <div class="card" style="width: 90%; height: 100%; margin-bottom: 2vh; border-color: rgb(255, 255, 255);">
+                            <a href="miniproject-1/interactive-map.html" target="_blank" style="text-decoration: none !important; color: #000000 !important;">
+                                <ul class="list-group list-group-flush"">
+                                    <li class="list-group-item" style="font-weight:300; font-size: 0.9em;">No. ①② - SVG PROGRAMMING</li>
+                                </ul>
+                                <img class=" rounded-5 border" src="code_resources/svg-map.png" style="width: 100%; height: 40vh; object-fit: cover;">
+                                <div class="card-body" >
+                                    <h5 class="card-title-projects-4" style="font-weight: 400;">UNIVERSITY MAP<i class="fancy-font"> Apr, 2020</i></h5>
+                                    <p class="card-text">Interactive map page created using <i class="fancy-font">SVG</i> and <i class="fancy-font">HTML</i>.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <!-- Card 13 -->
+                    <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center">
+                        <div class="card" style="width: 90%; height: 100%; margin-bottom: 2vh; border-color: rgb(255, 255, 255);">
+                            <a href="https://drive.google.com/drive/folders/1TuBNtZNufrIV5bi2oNkbqHzuyo7XGMQQ?usp=share_link" target="_blank" style="text-decoration: none !important; color: #000000 !important;">
+                                <ul class="list-group list-group-flush"">
+                                    <li class="list-group-item" style="font-weight:300; font-size: 0.9em;">No. ①③ - JAVA DEVELOPMENT</li>
+                                </ul>
+                                <img class="rounded-5 border" src="code_resources/atm.png" style="width: 100%; height: 40vh; object-fit: cover;">
+                                <div class="card-body" >
+                                    <h5 class="card-title-projects-2" style="font-weight: 400;">ATM BANK <i class="fancy-font"> 2020</i></h5>
+                                    <p class="card-text">ATM created using <i class="fancy-font">Java</i>.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+            
+                    <!-- Card 14 -->
+                    <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center">
+                        <div class="card" style="width: 90%; height: 100%; margin-bottom: 2vh; border-color: rgb(255, 255, 255);">
+                            <a href="https://drive.google.com/drive/folders/1s4gdSdTSnhP8187tEE3vY4Lyv90PN8vD?usp=share_link" target="_blank" style="text-decoration: none !important; color: #000000 !important;">
+                                <ul class="list-group list-group-flush"">
+                                    <li class="list-group-item" style="font-weight:300; font-size: 0.9em;">No. ①④ - JAVA DEVELOPMENT</li>
+                                </ul>
+                                <img class="rounded-5 border" src="code_resources/student-management.png" style="width: 100%; height: 40vh; object-fit: cover;">
+                                <div class="card-body" >
+                                    <h5 class="card-title-projects-2" style="font-weight: 400;">STUDENT MANAGEMENT SYSTEM <i class="fancy-font"> 2020</i></h5>
+                                    <p class="card-text">Student management system created using <i class="fancy-font">Java</i>.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+    
+                    <!-- Card 15 -->
+                    <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center">
+                        <div class="card" style="width: 90%; height: 100%; margin-bottom: 2vh; border-color: rgb(255, 255, 255);">
+                            <a href="https://drive.google.com/drive/folders/1JKwwfhv50HLhRgO9adICjcYVF1CrnjY9?usp=share_link" target="_blank" style="text-decoration: none !important; color: #000000 !important;">
+                                <ul class="list-group list-group-flush"">
+                                    <li class="list-group-item" style="font-weight:300; font-size: 0.9em;">No. ①⑤ - JAVA DEVELOPMENT</li>
+                                </ul>
+                                <img class=" rounded-5 border" src="code_resources/text-game.png" style="width: 100%; height: 40vh; object-fit: cover;">
+                                <div class="card-body" >
+                                    <h5 class="card-title-projects-4" style="font-weight: 400;">TEXT-BASED GAME<i class="fancy-font"> Apr, 2019</i></h5>
+                                    <p class="card-text"><i class="fancy-font">Dungeons and Dragons</i> inspired text-based game created using <i class="fancy-font">Java</i></p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 16 -->
+                    <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center">
+                        <div class="card" style="width: 90%; height: 100%; margin-bottom: 2vh; border-color: rgb(255, 255, 255);">
+                            <a href="https://drive.google.com/drive/folders/1K_8L5m6Q1R2f6DQmTGCF5_hUTR7Q9uQg?usp=share_link" target="_blank" style="text-decoration: none !important; color: #000000 !important;">
+                                <ul class="list-group list-group-flush"">
+                                    <li class="list-group-item" style="font-weight:300; font-size: 0.9em;">No. ①⑥ - APP DEVELOPMENT</li>
+                                </ul>
+                                <img class=" rounded-5" src="code_resources/fitmania.png" style="width: 100%; height: 40vh; object-fit: cover;">
+                                <div class="card-body" >
+                                    <h5 class="card-title-projects-4" style="font-weight: 400;">ANDROID FITNESS APP<i class="fancy-font"> Apr, 2019</i></h5>
+                                    <p class="card-text">Offline fitness app created using <i class="fancy-font">Android Studio</i></p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+    
+    
+                </div>
+            </div>
+
+            <style>
+                .card:hover h5 {
+                    text-decoration: underline;
+                }
+
+                .card:hover img {
+                    transform: scale(1.03); /* Zoom in effect on hover (adjust the scale value as needed) */
+                    transition: transform 0.3s ease-in-out; /* Add smooth transition for zoom effect */
+
+                }
+
+            </style>
+    
+    
+    
+    
+    
+  
+  
+        </div>
+
+
+        <button id="scroll-to-top" class="btn btn-primary rounded-circle " style="display: block;">↑</button>
+
+
+        <style>
+            #scroll-to-top {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                display: none;
+            }
+        
+        </style>
+
+        <script>
+
+            window.addEventListener('scroll', function() {
+                var scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        
+                if (scrollPosition > 220) {
+                    document.getElementById('scroll-to-top').style.display = 'block';
+                } else {
+                    document.getElementById('scroll-to-top').style.display = 'none';
+                }
+            });
+        
+            document.getElementById('scroll-to-top').addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    left: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+        </script>
+    
+    
+    </body>
+</html>
+
+
+
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen&display=swap');
+
+    
+</style>
+
+
+<style>
+    .fancy-font{
+        font-family: 'Adobe-Caslon-Pro';
+    }
+</style>
+
+<style>
+#overlay-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255); /* Semi-transparent white background */
+    z-index: 1000;
+    opacity: 0; /* Initially, set opacity to 0 */
+    transition: opacity 0.8s ease; /* Transition for opacity property */
+}
+
+#menu-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+
+#menu-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#menu-content ul li {
+    margin-bottom: 20px;
+}
+
+#menu-content ul li a {
+    color: #000000;
+    font-size: 24px;
+    text-decoration: none;
+}
+</style>
+
+ 
+
+<style>
+/* Styles for screens 591px or higher */
+@media (min-width: 592px) {
+    #project-item, #archive-item, #about-item {
+        display: block !important;
+    }
+
+    .menu-botton-container {
+        display: none;
+    }
+}
+
+/* Styles for screens 590px or lower */
+@media (max-width: 590px) {
+    #project-item, #archive-item, #about-item {
+        display: none !important;
+    }
+
+    .menu-botton-container {
+        display: inline-block;
+    }
+}
+
+.menu-botton-container {
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 2px;
+    background-color: #333;
+    margin: 9px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+</style>
+
+<style>
+
+    .no-margin {
+        margin: 0 !important;
+    }
+
+    .full-width {
+        width: 100vw;
+    }
+
+    .four-col-height {
+        height: 22.625vh; 
+    }
+  
+    .full-1st-height {
+        height: 90.5vh; 
+    }
+
+    .font-weight-normal {
+        font-weight: 400!important;
+    }
+    .text-dark {
+        color: #343a40!important;
+    }
+
+    html{
+        font-size: 100%;
+    }
+
+    .font-size-for-scroll{
+        font-size: 0.8rem;
+    }
+
+
+    .oval-image {
+        width: 77vw; 
+        height: 50vh;
+        overflow: hidden;
+        border-radius: 50%; 
+    }
+
+    .oval-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+  
+</style>

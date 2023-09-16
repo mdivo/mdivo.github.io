@@ -1,0 +1,1086 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Miguel Divo</title>
+    <link rel="icon" href="index_resources/tab-logo3.png" type="image/x-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  </head>
+
+
+  <body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk4vzc/dW8b5tv6v0w7pCqF5/2z2PpXhpz3q5t5z" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+
+
+    
+
+
+    <nav class="navbar sticky-top shadow-sm" id="navbar" style="background-color: rgb(255, 255, 255);">
+        <div class="container-fluid">
+            <div class="row align-items-center col-12 d-flex">
+                <div id="logoname" class="col-1 " style="width: 70px;">
+                <a class="navbar-brand padding-right-0" href="index.html">
+                        <img src="index_resources/logo2.png" alt="" width="50" height="50"  class="d-inline-block align-text-top">
+                    </a>
+                </div>
+                <div class="col d-flex">
+                    <a class="navbar-brand" href="index.html" style="font-weight: 500;">
+                        MIGUEL<br>DIVO
+                    </a>
+                </div>
+
+
+                <div id="headerlinks" class="col d-flex justify-content-end align-items-center">
+                    <div id="project-item" class="dropdown">
+                        <a class="navbar-brand ms-auto dropdown-toggle" href="#" role="button" id="projectsDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            PROJECTS
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
+                            <li><a class="dropdown-item" href="code.html">CODE</a></li>
+                            <li><a class="dropdown-item" href="design.html">DESIGN</a></li>
+                            <li><a class="dropdown-item" href="sound.html">SOUND</a></li>
+                        </ul>
+                    </div>
+                    <a id="archive-item" class="navbar-brand ms-auto" href="archives.html">ARCHIVES</a>
+                    <a id="about-item" class="navbar-brand ms-auto" href="about.html">ABOUT</a>
+
+                    <div class="menu-botton-container" onclick="menuAnimate(this)">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="overlay-menu">
+        <div id="menu-content">
+            <ul>
+                <div class="dropdown" style="margin-bottom: 20px; margin-left: 13px;">
+                    <a class="navbar-brand ms-auto dropdown-toggle" href="#" role="button" id="projectsDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 1.5em;">
+                        PROJECTS
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
+                        <li><a class="dropdown-item" style="font-size: 1em;" href="code.html">CODE</a></li>
+                        <li><a class="dropdown-item" style="font-size: 1em;" href="design.html">DESIGN</a></li>
+                        <li><a class="dropdown-item" style="font-size: 1em;" href="sound.html">SOUND</a></li>
+                    </ul>
+                </div>
+                
+                <li><a class="navbar-brand ms-auto" href="archives.html">ARCHIVES</a></li>
+                <li><a class="navbar-brand ms-auto" href="about.html">ABOUT</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script>
+        function menuAnimate(x) {
+            x.classList.toggle("change");
+            var overlayMenu = document.getElementById("overlay-menu");
+
+            if (overlayMenu.style.opacity === "0" || overlayMenu.style.opacity === "") {
+                overlayMenu.style.display = "block";
+                setTimeout(function () {
+                    overlayMenu.style.opacity = "1"; // Set opacity to 1 to fade in
+                }, 10); // Add a small delay to ensure the display change takes effect before fading in
+            } else {
+                overlayMenu.style.opacity = "0"; // Set opacity to 0 to fade out
+                setTimeout(function () {
+                    overlayMenu.style.display = "none";
+                }, 300); // Wait for the fade-out transition to complete before hiding
+            }
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+
+
+    <div id="launch-page-section" class="container-fluid full-1st-height full-width ">
+        <div class="row full-1st-height">
+            <div id="firstcol" class="col-12 col-sm-6 order-1 order-sm-1 full-1st-height" style="overflow: hidden; padding-left: 0px; padding-right: 0px;">
+                <div class="col" style="padding-left: 0px; padding-right: 0px;">
+
+
+                    
+                    <div class="col-12 border d-flex justify-content-center align-items-center" style="height: 20vh; overflow: visible;">
+                        <h1 id="name-div" class="fancy-font">Miguel <i style="font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Divo</i></h1>
+                    </div>
+
+                    <style>
+                        /* Default font size */
+                        #name-div {
+                            font-size: 9vw;
+                        }
+                    
+                        /* Media query for screens 575px or less */
+                        @media (max-width: 575px) {
+                            #name-div {
+                                font-size: 18vw;
+                            }
+                        }
+                    </style>
+
+                    
+
+
+                    
+                    <div class="col-12 border" style="height: 10vh; overflow: visible; align-items: center;">
+                        <section class="enable-animation" style="justify-content: flex-end; padding-top: 2.5vh;">
+                            <div class="marquee">
+                                <ul class="marquee__content p-0">
+                                    <li class=" border border-1 rounded-3 border-dark p-2">WELCOME</li>
+                                    <li class=" border border-1 rounded-3 border-dark p-2">TO</li>
+                                    <li class=" border border-1 rounded-3 border-dark p-2">MY</li>
+                                    <li class=" border border-1 rounded-3 border-dark p-2">PORTFOLIO</li>
+                                    <li class=" p-1">
+                                        <img src="index_resources/logo2.png" alt="" width="30" height="30">
+                                    </li>
+                                    <li class=" border border-1 rounded-3 border-dark p-2 fancy-font"><i>Welcome</i></li>
+                                    <li class=" border border-1 rounded-3 border-dark p-2 fancy-font"><i>To</i></li>
+                                    <li class=" border border-1 rounded-3 border-dark p-2 fancy-font"><i>My</i></li>
+                                    <li class=" border border-1 rounded-3 border-dark p-2 fancy-font"><i>Portfolio</i></li>
+                                    <li class=" p-1">
+                                        <img src="index_resources/logo3.png" alt="" width="30" height="30">
+                                    </li>
+                                    <li class=" border border-1 rounded-3 border-dark p-2">WELCOME</li>
+                                    <li class=" border border-1 rounded-3 border-dark p-2">TO</li>
+                                    <li class=" border border-1 rounded-3 border-dark p-2">MY</li>
+                                    <li class=" border border-1 rounded-3 border-dark p-2">PORTFOLIO</li>
+                                    <li class=" p-1">
+                                        <img src="index_resources/logo2.png" alt="" width="30" height="30">
+                                    </li>
+                                </ul>
+                                <ul class="marquee__content p-0">
+                                    <li class=" border border-1 rounded-3 border-dark p-2 fancy-font"><i>Welcome</i></li>
+                                    <li class=" border border-1 rounded-3 border-dark p-2 fancy-font"><i>To</i></li>
+                                    <li class=" border border-1 rounded-3 border-dark p-2 fancy-font"><i>My</i></li>
+                                    <li class=" border border-1 rounded-3 border-dark p-2 fancy-font"><i>Portfolio</i></li>
+                                    <li class=" p-1">
+                                        <img src="index_resources/logo3.png" alt="" width="30" height="30">
+                                    </li>
+                                    <li class=" border border-1 rounded-3 border-dark p-2">WELCOME</li>
+                                    <li class=" border border-1 rounded-3 border-dark p-2">TO</li>
+                                    <li class=" border border-1 rounded-3 border-dark p-2">MY</li>
+                                    <li class=" border border-1 rounded-3 border-dark p-2">PORTFOLIO</li>
+                                    <li class=" p-1">
+                                        <img src="index_resources/logo2.png" alt="" width="30" height="30">
+                                    </li>
+                                    <li class=" border border-1 rounded-3 border-dark p-2 fancy-font"><i>Welcome</i></li>
+                                    <li class=" border border-1 rounded-3 border-dark p-2 fancy-font"><i>To</i></li>
+                                    <li class=" border border-1 rounded-3 border-dark p-2 fancy-font"><i>My</i></li>
+                                    <li class=" border border-1 rounded-3 border-dark p-2 fancy-font"><i>Portfolio</i></li>
+                                    <li class=" p-1">
+                                        <img src="index_resources/logo3.png" alt="" width="30" height="30">
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <div class="row" style="padding-left: 0px; padding-right: 0px;">
+                    <div class="col-8" style="padding-right: 0px; padding-left: 0px;">
+
+
+                        <div id="descrip-content" class="col-12 border" style="height: 45vh; padding: 10%; overflow: auto;">
+                            
+                                <p style="font-size: 0.9em; ">
+                                    <i>User Experience and Service Design</i> Masters Student at <i>Loughborough University</i>. 
+                                    Design focussed with an interest in <i class="fancy-font">Web Development</i>, <i class="fancy-font">Multimedia</i>, <i class="fancy-font">UI/UX Design</i>, and <i class="fancy-font" >Digital Media</i>. 
+                                    Intertwined with my backgrounds in <i class="fancy-font">Art</i> and <i class="fancy-font">Music</i>. 
+                                    I enjoy being <i>Experimental</i> with different challenges and creating <i class="fancy-font">Innovative</i>, <i class="fancy-font">Creative</i> solutions through design and code.
+                                   
+                                </p>
+                            
+                        </div>
+
+                        <style>
+            
+                            #descrip-content {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                font-size: 1.5em; /* Default font size for screens 1498px or higher */
+                            }
+
+                            @media (max-width: 1497px) {
+                                #descrip-content {
+                                    font-size: 1.4em; /* Font size for screens between 1497px and 1233px */
+                                }
+                            }
+
+                            @media (max-width: 1232px) {
+                                #descrip-content {
+                                    font-size: 1.3em; /* Font size for screens between 1232px and 1064px */
+                                }
+                            }
+
+                            @media (max-width: 1063px) {
+                                #descrip-content {
+                                    font-size: 1.2em; /* Font size for screens between 1063px and 953px */
+                                }
+                            }
+
+                            @media (max-width: 952px) {
+                                #descrip-content {
+                                    font-size: 1em; /* Font size for screens between 952px and 376px */
+                                }
+                            }
+
+                            @media (max-width: 375px) {
+                                #descrip-content {
+                                    font-size: 0.9em; /* Font size for screens 375px or less */
+                                }
+                            }
+
+                        
+                       
+                        </style>
+                        
+                        
+                        
+                        <div id="timer-background" class="col-12 " style="height: 15.5vh;">
+
+                            <div id="MyClockDisplay" class="clock d-flex align-items-center justify-content-center" onload="showTime()"></div>
+                            
+                        </div>
+
+                    </div>
+
+                    
+
+
+                    <script>
+                        function showTime(){
+                            var date = new Date();
+                            var h = date.getHours(); // 0 - 23
+                            var m = date.getMinutes(); // 0 - 59
+                            var s = date.getSeconds(); // 0 - 59
+                            var session = "AM";
+                            
+
+                            if(h >= 12){
+                                session = 'PM';
+                            } else{
+                                session = 'AM';
+                            }
+                            
+                            h = (h < 10) ? "0" + h : h;
+                            m = (m < 10) ? "0" + m : m;
+                            s = (s < 10) ? "0" + s : s;
+                            
+                            var time = h + ":" + m + ":" + s + " " + session;
+                            document.getElementById("MyClockDisplay").innerText = time;
+                            document.getElementById("MyClockDisplay").textContent = time;
+                            
+                            setTimeout(showTime, 1000);
+
+            
+                            if(h==22 && m==49 && s==00){
+                                dragPOPUP.style.display = "block";
+                            }
+                        }
+
+                        showTime();
+                    </script>
+
+
+
+                   
+
+                    <!-- <div id="scroll-div" class="col-4 border" style="height: 60.5vh; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; padding-left: 0px; padding-right: 0px;">
+                        <video autoplay muted loop id="background-video">
+                            <source src="index_resources/0e91adca-1286-6bff-8cf4-c7edae0feab3.gif" type="image/gif">
+                        </video>
+                        
+                        <a id="scroll-button" class="btn rounded-pill border-dark" href="#" onclick="scrollToQuickInfo()" style="margin-bottom: 5vh; margin-right: 1vw;">
+                            <p class="text-dark m-0 font-weight-normal font-size-for-scroll">Scroll to Explore ↓</p>
+                        </a>
+                    </div> -->
+                    <div id="scroll-div" class="col-4 border" style="height: 60.5vh; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; padding-left: 0px; padding-right: 0px;">
+                        
+                        <img id="background-video" src="index_resources/f56a6a58-5e7e-041a-3bc6-df2493c3d2e3.gif" type="image/gif">
+                        
+                        <a id="scroll-button" class="btn rounded-pill border-dark" href="#" onclick="scrollToQuickInfo()" style="margin-bottom: 5vh; margin-right: 1vw;">
+                            <p class="text-dark m-0 font-weight-normal font-size-for-scroll">Scroll to Explore ↓</p>
+                        </a>
+                    </div>
+                    
+
+                    <style>
+                        #scroll-div {
+                            position: relative;
+                            overflow: hidden;
+                        }
+
+                        #background-video {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            z-index: -1;
+                        }
+
+                        #scroll-button {
+                            background-color: white;
+                            color: #000000; 
+                            transition: background-color 0.3s, color 0.3s; 
+                        }
+
+                        #scroll-button:hover {
+                            background-color: #000000; 
+                            color: #ffffff; 
+                        }
+
+
+                    </style>
+                    
+
+
+
+                    
+                    
+                    
+                    
+                    
+                </div>
+            </div>
+            <div id="secondcol" class="col-12 col-sm-6 order-2 order-sm-2 full-1st-height" style="overflow: hidden; padding-left: 0px; padding-right: 0px;">
+                <div class="col">
+                    
+                    <a href="code.html" style="text-decoration: none;">
+                        <div id="code-barsection" class="col-12 four-col-height " style="display: flex; flex-direction: column; justify-content: center; overflow: visible; background-image: url('index_resources/code-bar.png'); background-size: cover; background-position: center; color: rgb(255, 255, 255);">
+                            <h3 class="animated-underline" style="font-weight: 400; margin-left: 5%;">Code ↗</h3>
+                            <p style="margin-left: 5%;">Anything to do with programming. From <i class="fancy-font">Web Development</i> <br> to <i class="fancy-font">Physical Computing</i>, there's a bit of everything.</p>
+                        
+                        </div>
+                    </a>
+
+                    <a href="design.html" style="text-decoration: none;">
+                        <div id="design-barsection" class="col-12 four-col-height " style="display: flex; flex-direction: column; justify-content: center; align-items: flex-end; overflow: visible; background-image: url('index_resources/design-bar.jpeg'); background-size: cover; background-position: center; color: rgb(255, 255, 255);">
+                            <h3 class="animated-underline" style="font-weight: 400; text-align: right; margin-right: 5%;">Design ↗</h3>
+                            <p style="text-align: right; margin-right: 5%;">Design is in everything. <i class="fancy-font">UI/UX</i>, <i class="fancy-font">Product</i>, <i class="fancy-font">Visual</i> <br> <i class="fancy-font">Design</i> and everything in-between.</p>
+                        </div>
+                    </a>
+                    
+                    <a href="sound.html" style="text-decoration: none;">
+                        <div id="sound-barsection" class="col-12 four-col-height " style="display: flex; flex-direction: column; justify-content: center; overflow: visible; background-image: url('index_resources/sound-bar.png'); background-size: cover; background-position: center; color: rgb(255, 255, 255);">
+                            <h3 class="animated-underline" style="font-weight: 400; margin-left: 5%;">Sound ↗</h3>
+                            <p style="margin-left: 5%;"><i class="fancy-font">Music Production</i>, <i class="fancy-font">Sound Design</i>, <br> and all frequencies.</p>
+                        </div>
+                    </a>
+                    
+                    <a href="https://www.instagram.com/archivegallerymigz/" target="_blank" style="text-decoration: none;">
+                        <div id="studios-barsection" class="col-12 four-col-height " style="display: flex; flex-direction: column; justify-content: center; align-items: flex-end; overflow: visible; background-image: url('index_resources/studios-bar.png'); background-size: cover; background-position: center; color: rgb(255, 255, 255);">
+                            <h3 class="animated-underline" style="font-weight: 400; text-align: right; margin-right: 5%;">M.R. STUDIOS ↗</h3>
+                            <p style="text-align: right; margin-right: 5%;">An unorganised space of <i class="fancy-font">Ideas</i> and <i class="fancy-font">Works</i>.<br>An Instagram archive page.</p>
+                        </div>
+                    </a>
+                    
+
+
+                    <style>
+                       
+                        .animated-underline {
+                            text-decoration: none;
+                        }
+
+                        #code-barsection:hover .animated-underline {
+                            text-decoration: underline;
+                            transition: text-decoration 0.5s ease-in-out;
+                        }
+
+                        #design-barsection:hover .animated-underline {
+                            text-decoration: underline;
+                            transition: text-decoration 0.5s ease-in-out;
+                        }
+
+                        #sound-barsection:hover .animated-underline {
+                            text-decoration: underline;
+                            transition: text-decoration 0.5s ease-in-out;
+                        }
+
+                        #studios-barsection:hover .animated-underline {
+                            text-decoration: underline;
+                            transition: text-decoration 0.5s ease-in-out;
+                        }
+                        
+                      </style>
+
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+
+    <div id="quick-info-page-section" class="container-fluid full-1st-height full-width ">
+        <div class="row " style="height: 70vh; justify-content: center; align-items: center;">
+            
+            
+            <style>
+                .oval-image {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  text-align: center;
+                  position: relative;
+                  transition: filter 0.3s;
+                }
+              
+                .oval-image video {
+                  position: absolute;
+                  width: 125%;
+                  height: 125%;
+                  object-fit: cover;
+                  z-index: -1;
+                }
+              
+                .oval-image .content {
+                  height: 42vh;
+                  width: 40vw;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  justify-content: space-between;
+                  overflow: hidden;
+                  position: relative;
+                  z-index: 1;
+                  color: white;
+                }
+              
+                .oval-image:hover {
+                  filter: invert(100%);
+                }
+            </style>
+              
+            <div class="oval-image">
+                <video autoplay muted loop>
+                    <source src="index_resources/150x150.mp4" type="video/mp4">
+                </video>
+                <div class="content">
+                    <p style="font-size: 0.7rem; margin-top: 0;">LET'S CHECK OUT SOME <i class="fancy-font">Project</i></p>
+                    <p style="font-size: 2rem;">ANYTHING FROM <i class="fancy-font">Code</i>,<br> <i class="fancy-font">Design</i> OR <i class="fancy-font">Sound</i>, I DO IT <i class="fancy-font">All.</i> </p>
+                    <p style="font-size: 0.7rem; margin-bottom: 0;">Check out some of my <i class="fancy-font">Latest Works</i>, or explore through each of the different <i class="fancy-font">Project</i> categories: <i class="fancy-font">Code, Design</i>, and <i class="fancy-font">Sound</i>.</p>
+                </div>
+            </div>
+              
+
+
+        </div>
+
+        <section class="enable-animation" style="justify-content: flex-end;">
+            <div class="marquee">
+                <ul class="marquee__content p-0">
+                    <li class=" border border-1 rounded-3 border-dark p-2">CODE</li>
+                    <li class=" border border-1 rounded-3 border-dark p-2">DESIGN</li>
+                    <li class=" border border-1 rounded-3 border-dark p-2">SOUND</li>
+                    <li class=" border border-1 rounded-3 border-dark p-2">M R STUDIOS</li>
+                    <li class=" p-1">
+                        <img src="index_resources/logo2.png" alt="" width="30" height="30">
+                    </li>
+                    <li class=" border border-1 rounded-3 border-dark p-2">UI / UX</li>
+                    <li class=" border border-1 rounded-3 border-dark p-2">WEB DEVELOPMENT</li>
+                    <li class=" border border-1 rounded-3 border-dark p-2">DESIGN</li>
+                    <li class=" border border-1 rounded-3 border-dark p-2">PRODUCT DESIGN</li>
+                    <li class=" p-1">
+                        <img src="index_resources/logo3.png" alt="" width="30" height="30">
+                    </li>
+                    <li class=" border border-1 rounded-3 border-dark p-2">APP DESIGN</li>
+                    <li class=" border border-1 rounded-3 border-dark p-2">PROGRAMMING</li>
+                    <li class=" border border-1 rounded-3 border-dark p-2">SOUND DESIGN</li>
+                    <li class=" border border-1 rounded-3 border-dark p-2">CODE</li>
+                    <li class=" p-1">
+                        <img src="index_resources/logo2.png" alt="" width="30" height="30">
+                    </li>
+                </ul>
+                <ul class="marquee__content p-0">
+                    <li class=" border border-1 rounded-3 border-dark p-2">CODE</li>
+                    <li class=" border border-1 rounded-3 border-dark p-2">DESIGN</li>
+                    <li class=" border border-1 rounded-3 border-dark p-2">SOUND</li>
+                    <li class=" border border-1 rounded-3 border-dark p-2">M R STUDIOS</li>
+                    <li class=" p-1">
+                        <img src="index_resources/logo3.png" alt="" width="30" height="30">
+                    </li>
+                    <li class=" border border-1 rounded-3 border-dark p-2">UI / UX</li>
+                    <li class=" border border-1 rounded-3 border-dark p-2">WEB DEVELOPMENT</li>
+                    <li class=" border border-1 rounded-3 border-dark p-2">DESIGN</li>
+                    <li class=" border border-1 rounded-3 border-dark p-2">PRODUCT DESIGN</li>
+                    <li class=" p-1">
+                        <img src="index_resources/logo2.png" alt="" width="30" height="30">
+                    </li>
+                    <li class=" border border-1 rounded-3 border-dark p-2">APP DESIGN</li>
+                    <li class=" border border-1 rounded-3 border-dark p-2">PROGRAMMING</li>
+                    <li class=" border border-1 rounded-3 border-dark p-2">SOUND DESIGN</li>
+                    <li class=" border border-1 rounded-3 border-dark p-2">CODE</li>
+                    <li class=" p-1">
+                        <img src="index_resources/logo3.png" alt="" width="30" height="30">
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        
+
+        <div class="col-12 ">
+            <div class="row">
+        
+                <div class="col-12" style="height: 14vh;">
+                    <p style="font-size: 2rem; padding-top: 5vh; padding-bottom: 0px; margin-bottom: 0px;">LATEST WORKS</p>
+                    <hr style="color: #000000; height: 12px; margin-top: 0px;">
+                </div>
+        
+                <!-- Card 1 -->
+                <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center">
+                    <div class="card" style="width: 90%; height: 100%; margin-bottom: 2vh; border-color: rgb(255, 255, 255);">
+                        <a href="https://bit.ly/parallel-tracks" target="_blank" style="text-decoration: none !important; color: #000000 !important;">
+                            <ul class="list-group list-group-flush"">
+                                <li class="list-group-item" style="font-weight:300; font-size: 0.9em;">No. ① - UI / UX DEVELOPMENT</li>
+                            </ul>
+                            <img class="rounded-5" src="index_resources/no1-latest.png" style="width: 100%; height: 40vh; object-fit: cover;">
+                            <div class="card-body" >
+                                <h5 class="card-title-projects-1" style="font-weight: 400;">PARALLELTRACKS <i class="fancy-font"> May, 2023</i></h5>
+                                <p class="card-text">Undergraduate dissertation project, focused on the <i class="fancy-font">UI</i>, <i class="fancy-font">User Research</i>, and <i class="fancy-font">Web Development</i>.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center">
+                    <div class="card" style="width: 90%; height: 100%; margin-bottom: 2vh; border-color: rgb(255, 255, 255);">
+                        <a href="design_resources/ECS661U UX Design CW2 - Miguel Divo 200261001.pdf" target="_blank" style="text-decoration: none !important; color: #000000 !important;">
+                            <ul class="list-group list-group-flush"">
+                                <li class="list-group-item" style="font-weight:300; font-size: 0.9em;">No. ② - UX RESEARCH CASE STUDY</li>
+                            </ul>
+                            <img class="rounded-5 border" src="design_resources/ux-uni-casestudy.png" style="width: 100%; height: 40vh; object-fit: cover;">
+                            <div class="card-body" >
+                                <h5 class="card-title-projects-1" style="font-weight: 400;">IMPROVING THE UX OF UNIVERSITY <i class="fancy-font"> Apr, 2023</i></h5>
+                                <p class="card-text">Case study into improving the UX of studying at university for students.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                <!-- Card 3 -->
+                <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center">
+                    <div class="card" style="width: 90%; height: 100%; margin-bottom: 2vh; border-color: rgb(255, 255, 255);">
+                        <a href="https://www.figma.com/file/6F8U0r2etoaRG6tzbcQkJJ/BrainStation-UX-Design-Workshop?node-id=0%3A1&t=xaUOstMiLKFocDfK-1" target="_blank" style="text-decoration: none !important; color: #000000 !important;">
+                            <ul class="list-group list-group-flush"">
+                                <li class="list-group-item" style="font-weight:300; font-size: 0.9em;">No. ③ - APP DESIGN</li>
+                            </ul>
+                            <img class="rounded-5" src="index_resources/no2-latest.png" style="width: 100%; height: 40vh; object-fit: cover;">
+                            <div class="card-body" >
+                                <h5 class="card-title-projects-2" style="font-weight: 400;">UX WORKSHOP<i class="fancy-font"> Mar, 2023</i></h5>
+                                <p class="card-text">Took part in a UX design workshop at <i class="fancy-font">BrainStation London</i>.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+        
+                <!-- Card 4 -->
+                <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center">
+                    <div class="card" style="width: 90%; height: 100%; margin-bottom: 2vh; border-color: rgb(255, 255, 255);">
+                        <a href="https://www.youtube.com/watch?v=UlkMggCHyuQ" target="_blank" style="text-decoration: none !important; color: #000000 !important;">
+                            <ul class="list-group list-group-flush"">
+                                <li class="list-group-item" style="font-weight:300; font-size: 0.9em;">No. ④ - SOUND DESIGN</li>
+                            </ul>
+                            <img class="rounded-5" src="index_resources/no3-latest.png" style="width: 100%; height: 40vh; object-fit: cover;">
+                            <div class="card-body" >
+                                <h5 class="card-title-projects-2" style="font-weight: 400;">KILL BILL VOL. 1<i class="fancy-font"> Dec, 2022</i></h5>
+                                <p class="card-text">Remaking the <i class="fancy-font">Soundscape</i> for the infamous scene in <i class="fancy-font">Kill Bill Vol. 1</i>.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+
+
+            </div>
+        </div>
+
+
+
+
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen&display=swap');
+
+            #timer-background{
+                background-image: url(index_resources/time.png);
+                background-repeat: no-repeat;
+                background-size: cover ;
+                background-position: 0vh, 0vh; 
+                transition: all 0.3s;
+                height: 20vh;
+                width: 100%;
+            }
+            
+            .clock {
+                font-family: 'Press Start 2P', cursive;
+                color: white;
+                font-size: 1.5rem;
+                padding: 5px 5px;
+                position: relative;
+                display: inline-flex;
+                height: 100%;
+            }
+        </style>
+
+        <style>
+
+            .card-title-projects-1 {
+                position: relative;
+            }
+
+            .card-title-projects-1::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -2px; 
+                width: 0;
+                height: 2px; 
+                background-color: #000; 
+                transition: width 0.3s ease-in-out;
+            }
+
+            .card:hover .card-title-projects-1::after {
+                width: 80%;
+            }
+
+
+            .card-title-projects-2 {
+                position: relative;
+            }
+
+            .card-title-projects-2::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -2px; 
+                width: 0;
+                height: 2px; 
+                background-color: #000; 
+                transition: width 0.3s ease-in-out;
+            }
+
+            .card:hover .card-title-projects-2::after {
+                width: 75%;
+            }
+
+
+
+            .card-title-projects-4 {
+                position: relative;
+            }
+
+            .card-title-projects-4::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -2px; 
+                width: 0;
+                height: 2px; 
+                background-color: #000; 
+                transition: width 0.3s ease-in-out;
+            }
+
+            .card:hover .card-title-projects-4::after {
+                width: 45%;
+            }
+
+
+
+        </style>
+
+
+
+        
+
+
+        <div class="col-12 ">
+            <div class="row">
+        
+                <div class="col-12" style="height: 14vh;">
+                    <p style="font-size: 2rem; padding-top: 5vh; padding-bottom: 0px; margin-bottom: 0px;">PROJECTS</p>
+                    <hr style=" margin-top: 0px; color: #000000;">
+                </div>
+        
+                <!-- Card 1 -->
+                <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center align-items-center">
+                    <div class="card" style="width: 90%; height: 100%; margin-bottom: 2vh; border-color: rgb(255, 255, 255);">
+                        <a href="code.html" style="text-decoration: none !important; color: #000000 !important;">
+                            <img class="rounded-5 " src="index_resources/project-code-block.png" style="width: 100%; height: 40vh; object-fit: cover;">
+                            <div class="card-body" >
+                                <h5 class="card-title-projects" style="font-weight: 400;">CODE ↗</h5>
+                                <p class="card-text">Anything to do with <i class="fancy-font">Programming</i> will be included in this here.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                <!-- Card 2 -->
+                <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center align-items-center">
+                    <div class="card" style="width: 90%; height: 100%; margin-bottom: 2vh; border-color: rgb(255, 255, 255);">
+                        <a href="design.html" style="text-decoration: none !important; color: #000000 !important;">
+                            <img class="rounded-5 " src="index_resources/project-design-block.png" style="width: 100%; height: 40vh; object-fit: cover;">
+                            <div class="card-body" >
+                                <h5 class="card-title-projects" style="font-weight: 400;">DESIGN ↗</h5>
+                                <p class="card-text">Anything to do with <i class="fancy-font">Design</i> will be included in this here.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+        
+                <!-- Card 3 -->
+                <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center align-items-center">
+                    <div class="card" style="width: 90%; height: 100%; margin-bottom: 2vh; border-color: rgb(255, 255, 255);">
+                        <a href="sound.html" style="text-decoration: none !important; color: #000000 !important;">
+                            <img class="rounded-5 " src="index_resources/project-sound-block.png" style="width: 100%; height: 40vh; object-fit: cover;">
+                            <div class="card-body" >
+                                <h5 class="card-title-projects" style="font-weight: 400;">SOUND ↗</h5>
+                                <p class="card-text">Anything to do with <i class="fancy-font">Music</i> will be included in this here.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                
+
+
+            </div>
+        </div>
+
+        <style>
+
+            .card-title-projects {
+                position: relative;
+            }
+
+            .card-title-projects::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -2px; 
+                width: 0;
+                height: 2px; 
+                background-color: #000; 
+                transition: width 0.3s ease-in-out;
+            }
+
+            .card:hover .card-title-projects::after {
+                width: 20%;
+            }
+
+
+
+        </style>
+        
+
+
+
+    </div>
+
+    <script>
+        function scrollToQuickInfo() {
+            const quickInfoSection = document.getElementById("quick-info-page-section");
+    
+            
+                // Scroll to the quick info section smoothly
+                quickInfoSection.scrollIntoView({ behavior: "smooth" });
+            
+        }
+    </script>
+
+
+    <button id="scroll-to-top" class="btn btn-primary rounded-circle " style="display: block;">↑</button>
+
+
+    <style>
+        #scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            /* display: none; */
+        }
+    
+    </style>
+
+    <script>
+
+        window.addEventListener('scroll', function() {
+            var scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    
+            if (scrollPosition > 220) {
+                document.getElementById('scroll-to-top').style.display = 'block';
+            } else {
+                document.getElementById('scroll-to-top').style.display = 'none';
+            }
+        });
+    
+        document.getElementById('scroll-to-top').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+            });
+        });
+
+    </script>
+    
+    
+    
+
+
+  </body>
+</html>
+
+    <style>
+        .fancy-font{
+            font-family: 'Adobe-Caslon-Pro';
+        }
+    </style>
+
+<style>
+    #overlay-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255); /* Semi-transparent white background */
+        z-index: 1000;
+        opacity: 0; /* Initially, set opacity to 0 */
+        transition: opacity 0.8s ease; /* Transition for opacity property */
+    }
+
+    #menu-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+    }
+
+    #menu-content ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    #menu-content ul li {
+        margin-bottom: 20px;
+    }
+
+    #menu-content ul li a {
+        color: #000000;
+        font-size: 24px;
+        text-decoration: none;
+    }
+</style>
+
+<style>
+
+    @media (max-width: 575px) { 
+        #quick-info-page-section {
+            margin-top: 90.5vh; 
+        }
+    }
+</style>
+
+<style>
+    /* Styles for screens 591px or higher */
+    @media (min-width: 592px) {
+        #project-item, #archive-item, #about-item {
+            display: block !important;
+        }
+
+        .menu-botton-container {
+            display: none;
+        }
+    }
+
+    /* Styles for screens 590px or lower */
+    @media (max-width: 590px) {
+        #project-item, #archive-item, #about-item {
+            display: none !important;
+        }
+
+        .menu-botton-container {
+            display: inline-block;
+        }
+    }
+
+    .menu-botton-container {
+        cursor: pointer;
+    }
+
+    .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 2px;
+        background-color: #333;
+        margin: 9px 0;
+        transition: 0.4s;
+    }
+
+    .change .bar1 {
+        transform: translate(0, 11px) rotate(-45deg);
+    }
+
+    .change .bar2 {
+        opacity: 0;
+    }
+
+    .change .bar3 {
+        transform: translate(0, -11px) rotate(45deg);
+    }
+</style>
+
+
+<style>
+    li {
+        list-style-type: none;
+    }
+
+    /* Marquee styles */
+    .marquee {
+        --gap: 0rem;
+        position: relative;
+        display: flex;
+        overflow: hidden;
+        user-select: none;
+        gap: var(--gap);
+        width: 100%;
+    }
+
+    .marquee__content {
+        flex-shrink: 0;
+        display: flex;
+        justify-content: space-around;
+        gap: var(--gap);
+        min-width: fit-content;
+    }
+
+    @keyframes scroll {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(calc(-100% - var(--gap)));
+        }
+    }
+
+    /* Enable animation */
+    .enable-animation .marquee__content {
+        animation: scroll 30s linear infinite;
+    }
+
+    /* Attempt to size parent based on content. Keep in mind that the parent width is equal to both content containers that stretch to fill the parent. */
+    .marquee--fit-content {
+        max-width: fit-content;
+    }
+
+    /* A fit-content sizing fix: Absolute position the duplicate container. This will set the size of the parent wrapper to a single child container. Shout out to Olavi's article that had this solution 👏 @link: https://olavihaapala.fi/2021/02/23/modern-marquee.html  */
+    .marquee--pos-absolute .marquee__content:last-child {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    /* Enable position absolute animation on the duplicate content (last-child) */
+    .enable-animation .marquee--pos-absolute .marquee__content:last-child {
+        animation-name: scroll-abs;
+    }
+
+    @keyframes scroll-abs {
+        from {
+            transform: translateX(calc(100% + var(--gap)));
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+
+    /* Other page demo styles */
+    .marquee__content > * {
+        flex: 0 0 auto;
+        font-size: 1em;
+        border-radius: 0.25rem;
+        margin-left: 1rem;
+        text-align: center;
+    }
+</style>
+
+
+
+
+<style>
+
+    .no-margin {
+        margin: 0 !important;
+    }
+
+    .full-width {
+        width: 100vw;
+    }
+
+    .four-col-height {
+        height: 22.625vh; 
+    }
+  
+    .full-1st-height {
+        height: 90.5vh; 
+    }
+
+    .font-weight-normal {
+        font-weight: 400!important;
+    }
+    .text-dark {
+        color: #343a40!important;
+    }
+
+    html{
+        font-size: 100%;
+    }
+
+    .font-size-for-scroll{
+        font-size: 0.8rem;
+    }
+
+
+    .oval-image {
+        width: 77vw; 
+        height: 50vh;
+        overflow: hidden;
+        border-radius: 50%; 
+    }
+
+    .oval-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+  
+</style>
