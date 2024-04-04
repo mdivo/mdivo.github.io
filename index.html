@@ -38,6 +38,8 @@
 
                 <div id="headerlinks" class="col d-flex justify-content-end align-items-center">
                     <div id="project-item" class="dropdown">
+                        <a id="ux-item" class="navbar-brand ms-auto" href="#ux-projects">UX PROJECTS</a>
+
                         <a class="navbar-brand ms-auto dropdown-toggle" href="#" role="button" id="projectsDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             PROJECTS
                         </a>
@@ -63,6 +65,8 @@
     <div id="overlay-menu">
         <div id="menu-content">
             <ul>
+                <li><a class="navbar-brand ms-auto" href="#ux-projects">UX PROJECTS</a></li>
+
                 <div class="dropdown" style="margin-bottom: 20px; margin-left: 13px;">
                     <a class="navbar-brand ms-auto dropdown-toggle" href="#" role="button" id="projectsDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 1.5em;">
                         PROJECTS
@@ -538,7 +542,7 @@
         <div class="col-12 ">
             <div class="row">
         
-                <div class="col-12" style="height: 14vh;">
+                <div class="col-12" style="height: 14vh;" id="ux-projects">
                     <p style="font-size: 2rem; padding-top: 5vh; padding-bottom: 0px; margin-bottom: 0px;">UX PROJECTS & WORKS</p>
                     <hr style="color: #000000; height: 12px; margin-top: 0px;">
                 </div>
@@ -978,7 +982,7 @@
 <style>
     /* Styles for screens 591px or higher */
     @media (min-width: 592px) {
-        #project-item, #archive-item, #about-item {
+        #ux-item, #project-item, #archive-item, #about-item {
             display: block !important;
         }
 
@@ -989,7 +993,7 @@
 
     /* Styles for screens 590px or lower */
     @media (max-width: 590px) {
-        #project-item, #archive-item, #about-item {
+        #ux-item, #project-item, #archive-item, #about-item {
             display: none !important;
         }
 
