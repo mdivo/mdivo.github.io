@@ -62,6 +62,14 @@
 
 
                     <div id="headerlinks" class="col d-flex justify-content-end align-items-center">
+                      <a id="ux-item" class="navbar-brand ms-auto" href="#ux-projects">UX</a>
+
+                      <style>
+                          #ux-item{
+                              margin-right: auto !important;
+                          }
+                      </style>
+
                         <div id="project-item" class="dropdown">
                             <a class="navbar-brand ms-auto dropdown-toggle" href="#" role="button" id="projectsDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 PROJECTS
@@ -88,6 +96,8 @@
         <div id="overlay-menu">
             <div id="menu-content">
                 <ul>
+                  <li><a class="navbar-brand ms-auto" href="https://mdivo.github.io/index.html#ux-projects">UX PROJECTS</a></li>
+
                     <div class="dropdown" style="margin-bottom: 20px; margin-left: 13px;">
                         <a class="navbar-brand ms-auto dropdown-toggle" href="#" role="button" id="projectsDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 1.5em;">
                             PROJECTS
@@ -793,7 +803,7 @@
 <style>
 /* Styles for screens 591px or higher */
 @media (min-width: 592px) {
-    #project-item, #archive-item, #about-item {
+    #ux-item, #project-item, #archive-item, #about-item {
         display: block !important;
     }
 
@@ -804,7 +814,7 @@
 
 /* Styles for screens 590px or lower */
 @media (max-width: 590px) {
-    #project-item, #archive-item, #about-item {
+    #ux-item, #project-item, #archive-item, #about-item {
         display: none !important;
     }
 
